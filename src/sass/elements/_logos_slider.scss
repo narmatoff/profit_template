@@ -1,0 +1,71 @@
+.swiper-logos_wrapper {
+        width: 100%;
+        background-color: $darkGrey;
+        color: #fff;
+        position: relative;
+        height: 109px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+.logos__slider{
+    // outline: 1px dotted red;
+    @extend .content_width;
+    max-width: 1200px;
+    // padding-top: 1em;
+    overflow: hidden;
+    z-index: 2;
+    // height: 32em;
+    // display: flex;
+    // flex-flow: row nowrap;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 0 4em 0 4em;
+    &__slide{
+        height: auto;
+        // margin: 0 0 0 1em;
+        // width: 130px;
+    }
+    &__link{
+
+    }
+    &__img{
+        width: 130px;
+
+    }
+    &__arrows{
+        // outline: 1px dotted red;
+        @extend .content_width;
+        max-width: 1370px;
+        // min-width: 1280px;
+        padding: 0 1em 0 1em;
+        height: 32px;
+        z-index: 1;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        box-sizing: border-box;
+        // @include respond-to(postmedium-screens) {
+        //     display: none;
+        // }
+    }
+    &__next{
+        // outline: 1px dotted red;
+        right: 16px;
+        z-index: 10;
+
+    }
+    &__prev{
+        // outline: 1px dotted red;
+        left: 16px;
+        z-index: 10;
+
+    }
+}

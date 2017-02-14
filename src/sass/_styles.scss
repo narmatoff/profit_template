@@ -1,0 +1,74 @@
+body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.pace {
+    z-index: 99999999999999999999;
+}
+
+a {
+    text-decoration: underline;
+    color: #ebc401;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+b {
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+form {}
+
+input[type="password"],
+input[type="text"] {
+    border-radius: 8px;
+    background-color: #e7eded;
+    width: 221px;
+    height: 37px;
+    border: none;
+    padding: 0 1em;
+    margin: 0;
+    font-size: 0.9em;
+    outline: none;
+    &::-webkit-input-placeholder {
+        font-size: 0.9em;
+        color: #525252;
+    }
+    &::-moz-placeholder {
+        font-size: 0.9em;
+        // color: #c0392b;
+    }
+    &:-moz-placeholder {
+        font-size: 0.9em;
+        color: #525252;
+    }
+    &:-ms-input-placeholder {
+        font-size: 0.9em;
+        color: #525252;
+    }
+}
+
+select {
+    border: none;
+    padding: 0 1em;
+    margin: 0;
+    font-size: 0.9em;
+    outline: none;
+    font-size: 0.9em;
+    color: #525252;
+    border-radius: 10px;
+    background-color: #e7eded;
+    width: 221px;
+    height: 37px;
+    appearance: none;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 94% 45%;
+    option {}
+}

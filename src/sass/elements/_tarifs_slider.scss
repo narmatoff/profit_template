@@ -1,0 +1,204 @@
+.swiper {
+    &-main_wrapper {
+        width: 100%;
+        background-color: $lightGrey;
+        height: 44em;
+    }
+    &-tarifs {
+        // outline: 1px dotted red;
+        @extend .content_width;
+        // padding: 0;
+        padding-top: 1em;
+        overflow: hidden;
+        height: 32em;
+    }
+    &-wrapper {
+        // width: 100%;
+        height: auto;
+    }
+    &-tarif {
+        letter-spacing: 0;
+        // width: 100%;
+        // outline: 1px dotted green;
+        background-color: #fff;
+        box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.14);
+        // height: 25.209vw;
+        height: 484px;
+        min-width: 242px;
+        position: relative;
+        &.thebestof {
+            &:before {
+                content: "";
+                @include sprite($thebestofthebest);
+                display: inline-block;
+                position: absolute;
+                top: -4px;
+                right: -4px;
+                opacity: 1;
+                transition: all ease 0.2s;
+            }
+        }
+        &__tarif__name {
+            height: 93px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            color: $darkGrey;
+            text-align: center;
+            font-size: 1.1em;
+            /* Приближение из-за подстановки шрифтов */
+            // text-align: center;
+        }
+        &__tarif__price {
+            height: 116px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            background-color: $darkGrey;
+            &__value {
+                // font-family: ClearSans;
+                color: #ffffff;
+                font-size: 36px;
+                /* Приближение из-за подстановки шрифтов */
+                font-weight: 500;
+                line-height: 30px;
+                /* Приближение из-за подстановки шрифтов */
+                // text-align: center;
+                text-transform: uppercase;
+            }
+            &__perm {
+                /* Встроенный стиль */
+                font-family: $clearsansThinRegular;
+                color: #ffffff;
+                font-size: 1em;
+                /* Приближение из-за подстановки шрифтов */
+                font-weight: 400;
+                line-height: 30px;
+                /* Приближение из-за подстановки шрифтов */
+                // text-align: center;
+                padding: 1em 0 0 0.8em;
+            }
+        }
+        &__tarif__about {
+            height: 186px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            ul {
+                // font-family: ClearSans;
+                // font-family: $clearsansRegular;
+                color: lighten($darkGrey,25%);
+                font-size: 0.9em;
+                /* Приближение из-за подстановки шрифтов */
+                font-weight: 400;
+                line-height: 36px;
+                /* Приближение из-за подстановки шрифтов */
+                text-align: left;
+                list-style: none;
+                li {
+                    // margin: 0 0 1em 0
+                }
+            }
+        }
+        &__tarif__poscript {
+            height: 102px;
+            // font-family: ClearSans;
+            font-family: $clearsansLightRegular;
+            color: lighten($darkGrey,35%);
+            font-size: 0.9em;
+            /* Приближение из-за подстановки шрифтов */
+            font-style: italic;
+            line-height: 24px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            font-weight: normal;
+            // display: flex;
+            // flex-flow: row nowrap;
+            // justify-content: flex-start;
+            // align-items: center;
+            width: 80%;
+            margin: 0 auto;
+            span {
+                font-family: $clearsansBold;
+                // font-weight: bold;
+                font-style: normal;
+                font-size: 1em;
+            }
+        }
+        &_hover {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $darkGrey;
+            opacity: 0;
+            transform: translateY(-15px);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            // .type_button{
+            //     // height: auto;
+            //     margin: 1em 0 1em 0;
+            // }
+            &__name {
+                height: auto;
+                margin: 0.2em 0;
+                padding: 0;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                text-align: center;
+                font-size: 1.1em;
+                // /* Приближение из-за подстановки шрифтов */
+            }
+            &__price {
+                height: auto;
+                margin: 0.2em 0;
+                padding: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                background-color: $darkGrey;
+                &__value {
+                    // font-family: ClearSans;
+                    color: #ffffff;
+                    font-size: 36px;
+                    // /* Приближение из-за подстановки шрифтов */
+                    font-weight: 500;
+                    line-height: 30px;
+                    // /* Приближение из-за подстановки шрифтов */
+                    // text-align: center;
+                    text-transform: uppercase;
+                }
+                &__perm {
+                    // /* Встроенный стиль */
+                    font-family: $clearsansThinRegular;
+                    color: #ffffff;
+                    font-size: 1em;
+                    // /* Приближение из-за подстановки шрифтов */
+                    font-weight: 400;
+                    line-height: 30px;
+                    // /* Приближение из-за подстановки шрифтов */
+                    // text-align: center;
+                    padding: 1em 0 0 0.8em;
+                }
+            }
+        }
+        &:hover {
+            .swiper-tarif_hover {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            &.thebestof:before {
+                opacity: 0;
+            }
+        }
+    }
+}

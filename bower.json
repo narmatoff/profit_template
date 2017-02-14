@@ -1,0 +1,28 @@
+{
+  "name": "gulp_project",
+  "version": "0.0.0",
+  "authors": [
+    "narmatoff <narmatoff@ya.ru>"
+  ],
+  "main": "src/jade/index.jade",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dist/bower_components",
+    "test",
+    "tests",
+    "dist/components"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "description": "",
+  "homepage": ""
+}

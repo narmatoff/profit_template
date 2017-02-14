@@ -1,0 +1,22 @@
+.tarif__pageprice{
+	.tarif_item_prnbuttons{
+		.price_n_button_wr__price{
+		justify-content:flex-start;
+
+		}
+
+	}
+	&_buttons{
+		// outline:1px dotted red;
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:flex-start;
+		align-items:center;
+		a{
+			&:last-child{
+				margin: 0 0 0 1em;
+				font-size:0.9em;
+			}
+		}
+	}
+}

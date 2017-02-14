@@ -1,0 +1,15 @@
+.secondpage__content {
+    @extend .content_width2;
+    // outline: 1px dotted red;
+    padding-bottom: 50em;
+}
+
+.two_columns_content {
+    @extend .content_width;
+    // outline: 1px dotted red;
+    padding-bottom: 50em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}

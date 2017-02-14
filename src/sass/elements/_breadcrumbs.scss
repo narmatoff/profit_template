@@ -1,0 +1,35 @@
+.breadcrumbs{
+	
+	ul{
+        @extend .content_width;
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content:flex-start;
+		align-items:center;
+		color:lighten($grey,15%);	
+		margin-top: 2em;
+
+		li{
+			list-style-type:none;
+			text-transform:capitalize;
+			font-size:0.9em;
+			&:after{
+				content:"→";
+				line-height:1em;
+				color:lighten($grey,15%);
+				margin:0 1em 0 1em;	
+			}
+			&:last-child:after{
+				content:none;
+			}			
+			a{
+				color:lighten($grey,15%);
+				text-decoration:none;
+				&:hover{
+				text-decoration:underline;
+
+				}	
+			}
+		}
+	}
+}

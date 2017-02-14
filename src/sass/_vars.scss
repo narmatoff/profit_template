@@ -1,0 +1,35 @@
+// vars for media-queries
+// exampl:
+//      @include screen($littleboy-min, $littleboy-max){
+//          background-color: #000;
+//      }
+
+// // widths
+// $littleboy-min: 0px;
+// $littleboy-max: 480px;
+// ////////////////////////////////
+// $middleboy-min: 320px;
+// $middleboy-max: 568px;
+// //////////////////////////////
+// $olderboy-min: 414px;
+// $olderboy-max: 736px;
+// //////////////////////////////
+$mainMaxWidt:1920px;
+$mainMiddleWidt:1440px;
+$mainMinWidt:1024px;
+
+$asideWidt:22%;
+$articleWidt:72%;
+
+$anyPageContentWidt:637px;
+
+
+
+// main colors
+$lightGrey:#f4f4f4;
+$grey:#acacac;
+$yellow:#ff9c1c;
+$orange:#ff611c;
+$darkGrey:#323232;
+$blackColor:#131313;
+

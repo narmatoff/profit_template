@@ -1,0 +1,30 @@
+.usluga__listitem{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	align-items:center;
+	margin: 0 0 3.5em 0;
+	&:nth-child(2n){
+		img{
+			order: 2;
+		}
+	}
+	img{
+		// height:22.1vw;
+		// min-width:46%;
+		flex-basis:46%;
+		width: 46%;
+	}
+	&__info{
+		// width: 48%;
+		display:flex;
+		flex-flow:column nowrap;
+		justify-content:center;
+		align-items:flex-start;
+		flex-basis:46%;
+		h2{
+			margin-top: 0;
+		}
+
+	}
+}

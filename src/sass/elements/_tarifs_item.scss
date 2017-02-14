@@ -1,0 +1,97 @@
+.tarifs_list {}
+
+.tarif_item {
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.14);
+    height: 195px;
+    margin: 0 0 1.6em 0;
+    border: 1px solid lighten($grey, 15%);
+    background-color: #fff;
+    position: relative;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    &:before {
+        content: "";
+        // display: inline-block;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        opacity: 1;
+        transition: all ease 0.2s;
+    }
+    &.thebestof {
+        &:before {
+            content: "";
+            @include sprite($thebestofthebest);
+            // display: inline-block;
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            opacity: 1;
+            transition: all ease 0.2s;
+        }
+    }
+    &_name {
+        width: 30%;
+        .tarif_name {
+            font-size: 1.1em;
+            font-weight: normal;
+            margin: 0 0 1em 0;
+        }
+        .tarif_descr {
+            font-size: 1em;
+            font-style: italic;
+            color: $grey;
+        }
+    }
+    &_props {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                color: darken($grey, 20%);
+                margin: 0 0 0.7em 0;
+                &:last-child {
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+    }
+    &_prnbuttons {
+        .price_n_button_wr__price {
+            height: auto;
+            margin: 0.2em 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            // background-color: $darkGrey;
+            &__value {
+                // font-family: ClearSans;
+                // color: #ffffff;
+                font-size: 36px;
+                // /* Приближение из-за подстановки шрифтов */
+                font-weight: 500;
+                line-height: 30px;
+                // /* Приближение из-за подстановки шрифтов */
+                // text-align: center;
+                text-transform: uppercase;
+            }
+            &__perm {
+                // /* Встроенный стиль */
+                font-family: $clearsansThinRegular;
+                // color: #ffffff;
+                font-size: 1em;
+                // /* Приближение из-за подстановки шрифтов */
+                font-weight: 400;
+                line-height: 30px;
+                // /* Приближение из-за подстановки шрифтов */
+                // text-align: center;
+                padding: 1em 0 0 0.8em;
+            }
+        }
+    }
+}

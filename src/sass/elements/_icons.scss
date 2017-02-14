@@ -1,0 +1,32 @@
+// иконки
+.phone_icon {
+    @include sprite($phone);
+    display: inline-block;
+}
+
+.mail_icon {
+    @include sprite($mail);
+    display: inline-block;
+}
+
+.clock_icon {
+    @include sprite($clock);
+    display: inline-block;
+}
+
+.baloon_icon {
+    @include sprite($baloon);
+    display: inline-block;
+}
+.lupa_icon {
+    @include sprite($lupa);
+    display: inline-block;
+}
+.arrow_dark {
+    @include sprite($arrow_dark);
+    display: inline-block;
+}
+.arrow_light {
+    @include sprite($arrow_light);
+    display: inline-block;
+}

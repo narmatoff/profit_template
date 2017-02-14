@@ -1,0 +1,44 @@
+.horizontal_category_wrapper{
+	width: 100%;
+	// outline: 1px dotted red;
+    background-color: $darkGrey;
+    height: 165px;
+    &_items{
+        @extend .content_width;
+        // outline: 1px dotted red;
+        height: 100%;
+
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: 0.09em;
+    }
+    &_item{
+        width: 185px;
+        height: 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition:all ease 0.2s;
+        &:hover{
+            span{
+                color:$yellow;
+            }
+        }
+
+        span{
+            display: block;
+            color: #ffffff;
+            // font-size: 13px;/* Приближение из-за подстановки шрифтов */
+            font-weight: 500;
+            line-height: 18px;/* Приближение из-за подстановки шрифтов */
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            width: 100%;
+        }
+    }
+}

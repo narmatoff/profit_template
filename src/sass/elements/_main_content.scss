@@ -1,0 +1,50 @@
+.main__content__wr {
+    min-height: 1279px;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    &_back {
+        background-image: url('../img/wolkin_man.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+.mainpage__content {
+    @extend .content_width;
+    // outline: 1px dotted red;
+    padding-bottom: 50em;
+}
+.content {
+    &__horizontal {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .serif_font {
+            font-family: $timesNewRoman;
+            color: #323232;
+            // font-size: 42px;
+            font-size: 2.63em;
+            font-weight: 700;
+            letter-spacing: 0.42px;
+            text-align: left;
+            text-transform: inherit;
+            width: 365px;
+            min-width: 365px;
+            margin: 0 43px 0 0;
+        }
+        &__columner {
+            column-width: 30%;
+            column-count: 2;
+            column-gap: 43px;
+            column-rule: none;
+        }
+    }
+}

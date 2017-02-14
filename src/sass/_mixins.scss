@@ -1,0 +1,48 @@
+//MQ_variables
+$small: 620px;
+$large: $mainMinWidt;
+@mixin respond-to($media) {
+    @if $media==handhelds {
+        @media only screen and (max-width: $small) {
+            @content;
+        }
+    }
+    @if $media==middle-screens {
+        @media only screen and (max-width: $mainMiddleWidt) {
+            @content;
+        }
+    }
+    @else if $media==medium-screens {
+        @media only screen and (min-width: 0) and (max-width: $large - 1) {
+            @content;
+        }
+    }
+    @else if $media==postmedium-screens {
+        @media only screen and (min-width: $small + 295) and (max-width: $large - 1) {
+            @content;
+        }
+    }
+    @else if $media==wide-screens {
+        @media only screen and (min-width: $large) {
+            @content;
+        }
+    }
+}
+
+// // test media
+// @include respond-to(handhelds) {
+//     color: red;
+// }
+// @include respond-to(middle-screens) {
+//     color: red;
+// }
+// @include respond-to(medium-screens) {
+//     color: green;
+// }
+// @include respond-to(postmedium-screens) {
+//     color: orange;
+// }
+// @include respond-to(wide-screens) {
+//     color: yellow;
+// }
+// // test media

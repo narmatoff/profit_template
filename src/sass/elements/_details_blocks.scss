@@ -1,0 +1,60 @@
+.details__wrapper {
+    @extend .content_width;
+    position: relative;
+    height: 37em;
+    &__back {
+        // @include sprite($lemur_back);
+        background-image: url('../img/lemur_back.png');
+        background-size: cover;
+        width: 784px;
+        height: 578px;
+        position: absolute;
+        // right: 5.5em;
+        // right: 5%;
+        right: 0;
+        top: 0;
+    }
+    &__items {
+        position: relative;
+        z-index: 5;
+        height: 30em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        // width: 380px;
+        width: 28%;
+        &__content {
+            // outline: 1px dotted red;
+            width: 80%;
+        }
+        &__h {
+            // font-family: ClearSans;
+            color: darken($grey,25%);
+            font-size: 1.1em;
+            /* Приближение из-за подстановки шрифтов */
+            // font-weight: 500;
+            line-height: 26px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+            margin: 0 0 0.6em;
+            letter-spacing: 0.05em;
+        }
+        &__text {
+            font-family: $clearsansLightRegular;
+            color: darken($grey,25%);
+            font-size: 0.9em;
+            /* Приближение из-за подстановки шрифтов */
+            // font-weight: 400;
+            line-height: 24px;
+            /* Приближение из-за подстановки шрифтов */
+            text-align: left;
+        }
+    }
+}
