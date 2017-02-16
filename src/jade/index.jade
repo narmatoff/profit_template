@@ -43,7 +43,7 @@ html(lang="en")
                 .middle_nav__slogan Бухгалтерские и юридические услуги
                 a(href="#").button.button__yellow Получить консультацию
             .arrow_bottom.arrow_bottom__header
-        .main_width.category_wr
+        .main_width.category_wr#category
             a(href="#").category_item
                 //- img(src="img/svg/declaration.svg", alt="")
                 |<svg xmlns="http://www.w3.org/2000/svg" width="48" height="60" viewBox="0 0 48 60">
@@ -170,12 +170,102 @@ html(lang="en")
             .slider-button-prev.call_backs_arrow__prev
 
 
+        .full_width.full_width__grey.our_team
+            .big_heading наша команда
+            .team_list
+                .team_list_item
+                    img(src="img/team_item.jpg", alt="").team_list_item_img
+                    .team_list_item_info
+                        .team_list_item_info_name Имы Отчество Фамилия
+                        .team_list_item_info_status должность
+                        .team_list_item_info_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus  accumsan et viverra justo commodo...>
+                        a(href="tel:88123363636").team_list_item_info_phone 8 (812) 336 36 36
+                        a(href="mailto:profitprofit@mail.ru").team_list_item_info_email profitprofit@mail.ru
+                .team_list_item
+                    img(src="img/team_item2.jpg", alt="").team_list_item_img
+                    .team_list_item_info
+                        .team_list_item_info_name Имы Отчество Фамилия
+                        .team_list_item_info_status должность
+                        .team_list_item_info_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus  accumsan et viverra justo commodo...>
+                        a(href="tel:88123363636").team_list_item_info_phone 8 (812) 336 36 36
+                        a(href="mailto:profitprofit@mail.ru").team_list_item_info_email profitprofit@mail.ru
+                .team_list_item
+                    img(src="img/team_item3.jpg", alt="").team_list_item_img
+                    .team_list_item_info
+                        .team_list_item_info_name Имы Отчество Фамилия
+                        .team_list_item_info_status должность
+                        .team_list_item_info_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus  accumsan et viverra justo commodo...>
+                        a(href="tel:88123363636").team_list_item_info_phone 8 (812) 336 36 36
+                        a(href="mailto:profitprofit@mail.ru").team_list_item_info_email profitprofit@mail.ru
+                .team_list_item
+                    img(src="img/team_item.jpg", alt="").team_list_item_img
+                    .team_list_item_info
+                        .team_list_item_info_name Имы Отчество Фамилия
+                        .team_list_item_info_status должность
+                        .team_list_item_info_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus  accumsan et viverra justo commodo...>
+                        a(href="tel:88123363636").team_list_item_info_phone 8 (812) 336 36 36
+                        a(href="mailto:profitprofit@mail.ru").team_list_item_info_email profitprofit@mail.ru
+            a(href="").button.button__yellow.button__centered.about_button Узнать о нас больше
+        .full_width.full_width__darkgrey.our_partners
+            .big_heading.big_heading_white Наши партнеры
+            .logo_list
+                .logo_list_item
+                    img(src="img/coca.png", alt="")
+                .logo_list_item
+                    img(src="img/er.png", alt="")
+                .logo_list_item
+                    img(src="img/luk.png", alt="")
+                .logo_list_item
+                    img(src="img/gillette.png", alt="")
+                .logo_list_item
+                    img(src="img/mts.png", alt="")
+                .logo_list_item
+                    img(src="img/coca.png", alt="")
+                .logo_list_item
+                    img(src="img/er.png", alt="")
+                .logo_list_item
+                    img(src="img/luk.png", alt="")
+                .logo_list_item
+                    img(src="img/gillette.png", alt="")
+                .logo_list_item
+                    img(src="img/mts.png", alt="")
+
+        .full_width.full_width__white.questions
+            .big_heading есть вопросы?
+            .questions_text Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса
+            form(action="")
+                input(type="text",placeholder="Ваше имя").questions_input
+                input(type="text",placeholder="+7 _ _ _  _ _ _  _ _  _ _").questions_input
+                input(type="button",value="Получить консультацию").button.button__yellow.button__centered.questions_button
+        
+        .full_width.full_width__white.main_contacts
+            .main_contacts_map
+                |<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            .main_contacts_info
+                .main_contacts_info_block
+                    .big_heading.big_heading_white.contacts_list_heading Контакты
+                    .contacts_list
+                        .contacts_list_adr Санкт-Петербург, улица Магнитогорская, 51, лит A, офис 309
+                        .contacts_list_phone Тел.: 8 (812) 336 36 36
+                        .contacts_list_email E-mail: profit@mail.ru
+                        .contacts_list_time Режим работы:
+                            br
+                            |пн. - пт.: 9:00 - 18:00
+                            br
+                            |сб. - вс.: выходной
+
+
+        footer.full_width
+            .footer_content
+                .footer_content_cprt © «Профит» Бухгалтерские и юридические услуги в Санкт-Петербурге
+                .return_totop#totop
 
 
             
         //- bower:js
         script(src='components/jquery/dist/jquery.js')
         script(src='components/swiper/dist/js/swiper.js')
+        script(src='components/waypoints/lib/noframework.waypoints.js')
         //- endbower
 
         script(src="js/all.min.js")
