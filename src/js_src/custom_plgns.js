@@ -1,1 +1,3 @@
-console.log('custom_plugins');
+Pace.on('done', function() {
+    console.log('custom_plugins');
+});

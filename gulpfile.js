@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     notify = require("gulp-notify"),
     path = require('path'),
-    uncss = require('gulp-uncss'),
+    // uncss = require('gulp-uncss'),
     concat = require('gulp-concat'),
     // LessPluginCleanCSS = require('less-plugin-clean-css'),
     // cleancss = new LessPluginCleanCSS({
@@ -70,8 +70,8 @@ gulp.task('jade', function() {
         }).on('error', gutil.log))
         .pipe(connect.reload())
         .pipe(livereload())
-        .pipe(gulp.dest('dist/'))
-        .pipe(notify("jade готов!"));
+        .pipe(gulp.dest('dist/'));
+        // .pipe(notify("jade готов!"));
 });
 
 // fonts
@@ -79,10 +79,9 @@ gulp.task('fonts', function() {
     return gulp.src([
             'src/fonts/*.*'
         ])
-        .pipe(changed('dist/css/fonts'))
-
-    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
-        .pipe(notify("fonts Done!"))
+        // .pipe(changed('dist/css/fonts'))
+        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+        // .pipe(notify("fonts Done!"))
         .pipe(gulp.dest('dist/css/fonts'));
 });
 
@@ -115,8 +114,7 @@ gulp.task('fonts', function() {
 gulp.task('lint_mainjs', function() {
     return gulp.src('src/js_src/*.js')
         .pipe(changed('dist/js'))
-
-    .pipe(size())
+        .pipe(size())
         .pipe(concat('all.js'))
         // .pipe(plumber())
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
@@ -129,8 +127,8 @@ gulp.task('lint_mainjs', function() {
             suffix: '.min'
         }))
         .pipe(gulp.dest('dist/js'))
-        .pipe(size())
-        .pipe(notify("js готов!"));
+        .pipe(size());
+        // .pipe(notify("js готов!"));
 });
 // gulp.task('lint_mainjs', function() {
 //     return gulp.src('src/js_src/paceoptions.js')
@@ -175,9 +173,6 @@ gulp.task('sass', function() {
             outputStyle: 'compressed'
                 // outputStyle: 'expanded'
         }).on('error', sass.logError))
-        .pipe(uncss({
-            html: ['dist/*.html']
-        }))
         .pipe(rename('main.css'))
         .pipe(autoprefixer({
             browsers: ['last 14 versions'],
@@ -188,12 +183,15 @@ gulp.task('sass', function() {
             beautify: false
         }))
         .pipe(csso())
+        // .pipe(uncss({
+        //     html: ['dist/*.html']
+        // }))
         .pipe(sourcemaps.write('maps'))
         .pipe(gulp.dest('dist/css'))
         .pipe(size())
         .pipe(connect.reload())
-        .pipe(livereload())
-        .pipe(notify("sass готов!"));
+        .pipe(livereload());
+        // .pipe(notify("sass готов!"));
 });
 // спрайты
 gulp.task('sprite', function() {
@@ -225,8 +223,8 @@ gulp.task('sprite', function() {
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
-        .pipe(livereload())
-        .pipe(notify("sprite готов!"));
+        .pipe(livereload());
+        // .pipe(notify("sprite готов!"));
 });
 // svgsprites
 // gulp.task('svgsprites', function() {
@@ -243,8 +241,7 @@ gulp.task('sprite', function() {
 gulp.task('imagemin', function() {
     return gulp.src('src/images/*')
         .pipe(changed('dist/img'))
-
-    .pipe(size())
+        .pipe(size())
         // .pipe(plumber())
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(imagemin({
@@ -255,8 +252,8 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'))
         .pipe(size())
         .pipe(connect.reload())
-        .pipe(livereload())
-        .pipe(notify("imagemin готов!"));
+        .pipe(livereload());
+        // .pipe(notify("imagemin готов!"));
 });
 
 // image
@@ -283,8 +280,8 @@ gulp.task('image', function() {
         .pipe(gulp.dest('dist/img'))
         .pipe(size())
         .pipe(connect.reload())
-        .pipe(livereload())
-        .pipe(notify("image done"));
+        .pipe(livereload());
+        // .pipe(notify("image done"));
 });
 
 // svgmin
@@ -306,8 +303,8 @@ gulp.task('svgmin', function() {
             }]
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'))
-        .pipe(size())
-        .pipe(notify("svgmin готов!"));
+        .pipe(size());
+        // .pipe(notify("svgmin готов!"));
 });
 // bower
 gulp.task('bower', function() {
@@ -322,8 +319,8 @@ gulp.task('bower', function() {
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
-        .pipe(livereload())
-        .pipe(notify("bower готов!"));
+        .pipe(livereload());
+        // .pipe(notify("bower готов!"));
 });
 
 // connect
@@ -390,10 +387,10 @@ gulp.task('watch', function() {
     // gulp.watch('src/images/master_picture.png', ['inject-favicon-markups']);
     // gulp.watch('src/images/forsvgsprts/*.svg', ['svgsprites']);
     gulp.watch('src/images/*', ['imagemin']);
-    gulp.watch('src/images/svg/**/*.svg', ['svgmin']);
+    gulp.watch('src/images/svg/*', ['svgmin']);
     // gulp.watch('src/less/**/*.less', ['less']);
     // gulp.watch('src/coffee/*.coffee', ['coffee']);
     livereload.listen();
 });
 // default
-gulp.task('default', ['jade', 'sass', 'bower', 'fonts', 'lint_mainjs', 'sprite', 'image', 'svgmin', 'watch', 'connect']);
+gulp.task('default', ['jade', 'sprite', 'fonts', 'sass', 'bower', 'lint_mainjs', 'image', 'svgmin', 'watch', 'connect']);
