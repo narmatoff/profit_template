@@ -10,25 +10,29 @@ Pace.on('done', function() {
         // Enable lazy loading
         slidesPerView: 3,
         spaceBetween: 70,
-        lazyLoading: true
-            // breakpoints: {
-            //     1024: {
-            //         slidesPerView: 4,
-            //         spaceBetween: 40
-            //     },
-            //     768: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 30
-            //     },
-            //     640: {
-            //         slidesPerView: 2,
-            //         spaceBetween: 20
-            //     },
-            //     320: {
-            //         slidesPerView: 1,
-            //         spaceBetween: 10
-            //     }
+        lazyLoading: true,
+        breakpoints: {
+            1440: {
+                slidesPerView: 3,
+                spaceBetween: 70
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 70
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 70
+            },
+            // 640: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20
+            // },
+            // 320: {
+            //     slidesPerView: 1,
+            //     spaceBetween: 10
             // }
+        }
     });
 
 
@@ -36,9 +40,16 @@ Pace.on('done', function() {
     var scrollDiv = $("#totop");
     scrollDiv.click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
-    });    
+    });
     var scrollDiv2 = $(".arrow_bottom__header");
     scrollDiv2.click(function() {
         $("html, body").animate({ scrollTop: 770 }, "slow");
+    });
+
+
+    $('.category_wr').packery({
+        // options...
+        itemSelector: '.category_item',
+        gutter: 11
     });
 });

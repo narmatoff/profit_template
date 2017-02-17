@@ -1,6 +1,6 @@
 //MQ_variables
 $small: 620px;
-$large: $mainMinWidt;
+$large: $mainMiddleWidt;
 @mixin respond-to($media) {
     @if $media==handhelds {
         @media only screen and (max-width: $small) {

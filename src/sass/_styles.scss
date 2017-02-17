@@ -144,7 +144,7 @@ select {
 
 // main stylesheet
 header {
-    max-width: 1920px;
+    max-width: 100%;
     width: 100%;
     background-image: url('../img/header_photo.jpg');
     background-repeat: no-repeat;
@@ -286,6 +286,14 @@ header {
         text-decoration: none;
         margin: 0 0 11px 0;
         transition: all ease .2s;
+        @include respond-to(medium-screens) {
+            width: 18vw;
+    height: 13vw;
+            min-width: 175px;
+            min-height: 140px;
+            font-size: 14px;
+
+        }
         svg {
             margin: 0 0 1em 0;
             path {
@@ -321,7 +329,7 @@ header {
     background-image: url('../img/privelegies_back.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 709px;
+    min-height: 709px;
     padding: 5.5vw 0;
     box-sizing: border-box;
 }
@@ -361,6 +369,9 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    @include respond-to(medium-screens) {
+        max-width: 80%;
+    }
 }
 
 .ease_with_us_item {
@@ -399,6 +410,7 @@ header {
 
 .onepageslider {
     position: relative;
+    padding: 0 2em 0 2em;
 }
 
 .call_backs {
@@ -413,6 +425,8 @@ header {
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        padding: 0 0.9em 0 0.9em;
+        box-sizing: border-box;
         .callbacker_img {
             overflow: hidden;
             border-radius: 3em;
@@ -458,6 +472,10 @@ header {
         position: absolute;
         background-size: cover;
         cursor: pointer;
+        @include respond-to(medium-screens) {
+            // color: green;
+            display: none;
+        }
     }
     &_arrow__prev {
         // outline: 1px dotted red;
@@ -469,6 +487,10 @@ header {
         background-size: cover;
         position: absolute;
         cursor: pointer;
+        @include respond-to(medium-screens) {
+            // color: green;
+            display: none;
+        }
         // transform:rotate(180deg);
     }
 }
@@ -624,6 +646,10 @@ header {
         &_block {
             margin: 6vw 0 0 9vw;
             width: 330px;
+            @include respond-to(medium-screens) {
+                // color: green;
+                margin: 2vw 0 0 6vw;
+            }
             .contacts_list {
                 font-family: $openSans;
                 color: $lightFontColor;
@@ -695,14 +721,14 @@ footer {
     height: 53px;
     background-color: $darkGrey;
     .footer_content {
-        display:flex;
-        flex-flow:row wrap;
-        justify-content:space-between;
-        align-items:center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
         max-width: $mainMiddleWidt;
         margin: 0 auto;
-        height:100%;
-        &_cprt{
+        height: 100%;
+        &_cprt {
             color: $lightFontColor;
             font-family: $openSans;
             font-size: 14px;
@@ -710,7 +736,6 @@ footer {
             letter-spacing: 0.14px;
             // line-height: 24px;
             // text-align: left;
-
         }
     }
     .return_totop {
@@ -718,6 +743,6 @@ footer {
         background-repeat: no-repeat;
         width: 23px;
         height: 13px;
-        cursor:pointer;
+        cursor: pointer;
     }
 }
