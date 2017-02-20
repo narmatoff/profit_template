@@ -11,28 +11,28 @@ Pace.on('done', function() {
         slidesPerView: 3,
         spaceBetween: 70,
         lazyLoading: true,
-        breakpoints: {
-            1440: {
-                slidesPerView: 3,
-                spaceBetween: 70
-            },
-            1024: {
-                slidesPerView: 2,
-                spaceBetween: 70
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 70
-            },
-            // 640: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20
-            // },
-            // 320: {
-            //     slidesPerView: 1,
-            //     spaceBetween: 10
-            // }
-        }
+        // breakpoints: {
+        //     1440: {
+        //         slidesPerView: 3,
+        //         spaceBetween: 70
+        //     },
+        //     1024: {
+        //         slidesPerView: 2,
+        //         spaceBetween: 70
+        //     },
+        //     768: {
+        //         slidesPerView: 1,
+        //         spaceBetween: 70
+        //     },
+        //     // 640: {
+        //     //     slidesPerView: 2,
+        //     //     spaceBetween: 20
+        //     // },
+        //     // 320: {
+        //     //     slidesPerView: 1,
+        //     //     spaceBetween: 10
+        //     // }
+        // }
     });
 
 
