@@ -10,6 +10,44 @@ body {
     z-index: 99999999999999999999;
 }
 
+ul.breadcrumbs {
+    list-style: none;
+    max-width: $mainMinWidt;
+    margin: 2.5em auto;
+    li {
+        font-family: $openSans;
+        font-size: 13px;
+        line-height: 24px;
+        text-align: left;
+        color: $yellow;
+        display: inline-block;
+        &:after {
+            content: "/";
+            display: inline-block;
+            padding: 0 0em 0 0.3em;
+            margin: 0;
+            color: $darkFontColor;
+        }
+        &:last-child {
+            &:after {
+                content: "";
+            }
+        }
+        a {
+            color: $darkFontColor;
+            text-decoration: underline;
+        }
+    }
+}
+
+section {
+    max-width: 728px;
+    margin: 0 auto;
+    padding: 0 0 4em 0;
+}
+
+article {}
+
 p {
     font-family: $openSans;
     color: $darkFontColor;
@@ -17,6 +55,32 @@ p {
     font-weight: 400;
     line-height: 26px;
     text-align: left;
+    &.accent {
+        // font-family: OpenSans;
+        // color: #373737;
+        // font-size: 30px;
+        // font-weight: 400;
+        // text-align: center;
+        line-height: 2.5em;
+        margin: 5em auto;
+        max-width:530px;
+        .bolding {
+            font-family: $openSans;
+            color: $darkFontColor;
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+            display: block;
+        }
+        .italing {
+            display: block;
+            font-family: $openSansLI;
+            color: $darkFontColor;
+            font-size: 30px;
+            font-style: italic;
+            text-align: center;
+        }
+    }
 }
 
 a {
@@ -90,9 +154,10 @@ select {
 .button {
     width: auto;
     padding: 0 2em 0 2em;
+    margin: 0 1em 0 1em;
     height: 43px;
-    color: $darkFontColor;
-    background-color: #fff;
+    color: $lightFontColor;
+    // background-color: #fff;
     display: inline-flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -105,31 +170,48 @@ select {
     text-align: center;
     border-radius: 1.5em;
     transition: all ease .2s;
+    border: 1px solid $lightFontColor;
+    &:hover {
+        border: 1px solid $yellow;
+        color: $yellow;
+    }
     &__yellow {
         background-color: $yellow;
         color: $darkFontColor;
+        border: none;
         &:hover {
             background-color: darken($yellow, 15%);
+            border: none;
+            color: $darkFontColor;
         }
     }
     &__orange {
         background-color: $orange;
         color: $darkFontColor;
+        border: none;
         &:hover {
+            border: none;
+            color: $darkFontColor;
             background-color: darken($orange, 15%);
         }
     }
     &__blue {
         background-color: $blue;
         color: $lightFontColor;
+        border: none;
         &:hover {
+            color: $lightFontColor;
+            border: none;
             background-color: darken($blue, 15%);
         }
     }
     &__blazerblue {
         background-color: $blazerBlue;
         color: $lightFontColor;
+        border: none;
         &:hover {
+            color: $lightFontColor;
+            border: none;
             background-color: darken($blazerBlue, 15%);
         }
     }
@@ -196,6 +278,10 @@ header {
         height: 100%;
         z-index: 1;
         // opacity: 0.5;
+    }
+    &.notmain_header {
+        min-height: 413px;
+        max-height: 413px;
     }
 }
 

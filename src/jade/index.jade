@@ -1,31 +1,8 @@
 <!DOCTYPE html/>
-html(lang="en")
+html(lang="ru")
     include ./includes/head.jade
     body
-        header
-            .top_nav
-                .top_nav__address
-                    span Санкт-Петербург
-                    span Магнитогорская 51 лит А офис 309
-                    a(href="#") смотреть на карте
-                ul.top_nav__menu
-                    li.selected_menuitem
-                        a(href="#") Главная
-                    li
-                        a(href="#") О компании
-                    li
-                        a(href="#") Услуги
-                    li
-                        a(href="#") Полезная информация
-                    li
-                        a(href="#") Вопрос/ответ
-                    li
-                        a(href="#") Контакты
-            .middle_nav
-                .middle_nav__name ООО «Профит»
-                .middle_nav__slogan Бухгалтерские и юридические услуги
-                a(href="#").button.button__yellow Получить консультацию
-            .arrow_bottom.arrow_bottom__header
+        include ./includes/main_header.jade
         .main_width.category_wr#category
             a(href="#").category_item
                 //- img(src="img/svg/declaration.svg", alt="")
@@ -238,12 +215,3 @@ html(lang="en")
                             |сб. - вс.: выходной
 
         include ./includes/footer.jade
-
-        //- bower:js
-        script(src='components/jquery/dist/jquery.js')
-        script(src='components/swiper/dist/js/swiper.js')
-        script(src='components/waypoints/lib/noframework.waypoints.js')
-        //- endbower
-        script(src='//unpkg.com/packery@2.1/dist/packery.pkgd.min.js')
-
-        script(src="js/all.min.js")

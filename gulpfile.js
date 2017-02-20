@@ -315,7 +315,7 @@ gulp.task('bower', function() {
         .pipe(wiredep({
             directory: "dist/components/",
             // игнорируем путь для относительности путей(если стили и библиотеки не подключились)
-            ignorePath: '../../dist/'
+            ignorePath: '../../../dist/'
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())

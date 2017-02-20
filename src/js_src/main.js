@@ -52,4 +52,17 @@ Pace.on('done', function() {
         itemSelector: '.category_item',
         gutter: 11
     });
+
+    // $(document).bind('mousewheel', function(e) {
+    //     var nt = $(document.body).scrollTop() - (e.originalEvent.wheelDeltaY);
+    //     e.preventDefault();
+
+    //     $(document.body).stop().animate({
+    //         scrollTop: nt
+    //     }, 300);
+    // });
+
+    var s = skrollr.init({
+        smoothScrolling: true
+    });
 });
