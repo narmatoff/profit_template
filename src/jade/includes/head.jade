@@ -9,8 +9,19 @@ head
     meta(name="keywords",content="HTML,CSS,XML,JavaScript")
     meta(name="author",content="lum.ru")
 
+    style .loading_resources{
+        |position: fixed;
+        |width: 100%;
+        |height: 100%;
+        |background-color: rgba(0, 0, 0, 0.7);
+        |top: 0;
+        |left: 0;
+        |z-index: 99;
+        |display: block;
+        |transition:all ease .8s;
+        |}
     script(src='https://cdn.jsdelivr.net/pace/1.0.2/pace.min.js')
-    link(rel="stylesheet", href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-flash.css")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-center-simple.css")
         
     link(rel="stylesheet", href="css/main.css")
     //- bower:css

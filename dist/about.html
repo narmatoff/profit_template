@@ -9,8 +9,21 @@
     <meta name="news_date" content="2016-05-01" scheme="YYYY-MM-DD"/>
     <meta name="keywords" content="HTML,CSS,XML,JavaScript"/>
     <meta name="author" content="lum.ru"/>
+    <style>
+      .loading_resources{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      z-index: 99;
+      display: block;
+      transition:all ease .8s;
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-flash.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-center-simple.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="components/swiper/dist/css/swiper.css"/>
   </head>
@@ -46,6 +59,141 @@
           <p>"Да, он прав, тысячу раз прав этот дуб, - думал князь Андрей, пускай другие, молодые, вновь поддаются на этот обман, а мы знаем жизнь, - наша жизнь кончена!" Целый новый ряд мыслей безнадежных, но грустно-приятных в связи с этим дубом, возник в душе князя Андрея. Во время этого путешествия он как будто вновь обдумал всю свою жизнь, и пришел к тому же прежнему успокоительному и безнадежному заключению, что ему начинать ничего было не надо, что он должен доживать свою жизнь, не делая зла, не тревожась и ничего не желая.</p>
         </article>
       </section>
+    </div>
+    <div class="testimonials_block">
+      <div class="big_heading big_heading_white">Наши клиенты</div>
+      <div class="testimonials_sliderwr">
+        <div class="pensils"></div>
+        <div class="sunglasses"></div>
+        <div class="coffeecup"></div>
+        <div class="notebook"></div>
+        <div class="testimonials-container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonials_item">
+              <div class="testimonials_item_photo"><img src="./img/grigory.jpg" alt=""/></div>
+              <div class="testimonials_item_name">Глеб Степанов</div>
+              <div class="testimonials_item_info">40 лет. Женат. Есть двое детей.</div>
+              <div class="testimonials_item_about">Глеб - хозяин компании, которая оказывает услуги в сфере ИТ. В штате 30 человек. Глеб довольно давно в бизнесе и у него уже был работы с разными подрядчиками, которые оказывали ему услуги по ведению бухгалтерии. Так же был опыт бухгалтера в штате. Когда в очередной раз возникли проблемы с текущим подрачиком, Глеб решил найти альтернативу.</div>
+              <div class="testimonials_item_strategy">
+                <div class="testimonials_item_strategy_cel"><img src="./img/svg/pricel.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Цель работы</div>
+                  <div class="testims_info">Найти надежного подрядчика, который будет настоящим профессионалом в своем деле.</div>
+                </div>
+                <div class="testimonials_item_strategy_str"><img src="./img/svg/strategy.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Стратегия</div>
+                  <div class="testims_info">
+                    Оперативность
+                    Пунтктуальность
+                    Опыт
+                  </div>
+                </div>
+                <div class="testimonials_item_strategy_result"><img src="./img/svg/result.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Результат</div>
+                  <div class="testims_info">Описание опыта, примеров взаимодесвия, список компаний, которые уже сотрудничают.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials_item">
+              <div class="testimonials_item_photo"><img src="./img/grigory.jpg" alt=""/></div>
+              <div class="testimonials_item_name">Глеб Степанов</div>
+              <div class="testimonials_item_info">40 лет. Женат. Есть двое детей.</div>
+              <div class="testimonials_item_about">Глеб - хозяин компании, которая оказывает услуги в сфере ИТ. В штате 30 человек. Глеб довольно давно в бизнесе и у него уже был работы с разными подрядчиками, которые оказывали ему услуги по ведению бухгалтерии. Так же был опыт бухгалтера в штате. Когда в очередной раз возникли проблемы с текущим подрачиком, Глеб решил найти альтернативу.</div>
+              <div class="testimonials_item_strategy">
+                <div class="testimonials_item_strategy_cel"><img src="./img/svg/pricel.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Цель работы</div>
+                  <div class="testims_info">Найти надежного подрядчика, который будет настоящим профессионалом в своем деле.</div>
+                </div>
+                <div class="testimonials_item_strategy_str"><img src="./img/svg/strategy.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Стратегия</div>
+                  <div class="testims_info">
+                    Оперативность
+                    Пунтктуальность
+                    Опыт
+                  </div>
+                </div>
+                <div class="testimonials_item_strategy_result"><img src="./img/svg/result.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Результат</div>
+                  <div class="testims_info">Описание опыта, примеров взаимодесвия, список компаний, которые уже сотрудничают.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials_item">
+              <div class="testimonials_item_photo"><img src="./img/grigory.jpg" alt=""/></div>
+              <div class="testimonials_item_name">Глеб Степанов</div>
+              <div class="testimonials_item_info">40 лет. Женат. Есть двое детей.</div>
+              <div class="testimonials_item_about">Глеб - хозяин компании, которая оказывает услуги в сфере ИТ. В штате 30 человек. Глеб довольно давно в бизнесе и у него уже был работы с разными подрядчиками, которые оказывали ему услуги по ведению бухгалтерии. Так же был опыт бухгалтера в штате. Когда в очередной раз возникли проблемы с текущим подрачиком, Глеб решил найти альтернативу.</div>
+              <div class="testimonials_item_strategy">
+                <div class="testimonials_item_strategy_cel"><img src="./img/svg/pricel.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Цель работы</div>
+                  <div class="testims_info">Найти надежного подрядчика, который будет настоящим профессионалом в своем деле.</div>
+                </div>
+                <div class="testimonials_item_strategy_str"><img src="./img/svg/strategy.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Стратегия</div>
+                  <div class="testims_info">
+                    Оперативность
+                    Пунтктуальность
+                    Опыт
+                  </div>
+                </div>
+                <div class="testimonials_item_strategy_result"><img src="./img/svg/result.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Результат</div>
+                  <div class="testims_info">Описание опыта, примеров взаимодесвия, список компаний, которые уже сотрудничают.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials_item">
+              <div class="testimonials_item_photo"><img src="./img/grigory.jpg" alt=""/></div>
+              <div class="testimonials_item_name">Глеб Степанов</div>
+              <div class="testimonials_item_info">40 лет. Женат. Есть двое детей.</div>
+              <div class="testimonials_item_about">Глеб - хозяин компании, которая оказывает услуги в сфере ИТ. В штате 30 человек. Глеб довольно давно в бизнесе и у него уже был работы с разными подрядчиками, которые оказывали ему услуги по ведению бухгалтерии. Так же был опыт бухгалтера в штате. Когда в очередной раз возникли проблемы с текущим подрачиком, Глеб решил найти альтернативу.</div>
+              <div class="testimonials_item_strategy">
+                <div class="testimonials_item_strategy_cel"><img src="./img/svg/pricel.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Цель работы</div>
+                  <div class="testims_info">Найти надежного подрядчика, который будет настоящим профессионалом в своем деле.</div>
+                </div>
+                <div class="testimonials_item_strategy_str"><img src="./img/svg/strategy.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Стратегия</div>
+                  <div class="testims_info">
+                    Оперативность
+                    Пунтктуальность
+                    Опыт
+                  </div>
+                </div>
+                <div class="testimonials_item_strategy_result"><img src="./img/svg/result.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Результат</div>
+                  <div class="testims_info">Описание опыта, примеров взаимодесвия, список компаний, которые уже сотрудничают.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide testimonials_item">
+              <div class="testimonials_item_photo"><img src="./img/grigory.jpg" alt=""/></div>
+              <div class="testimonials_item_name">Глеб Степанов</div>
+              <div class="testimonials_item_info">40 лет. Женат. Есть двое детей.</div>
+              <div class="testimonials_item_about">Глеб - хозяин компании, которая оказывает услуги в сфере ИТ. В штате 30 человек. Глеб довольно давно в бизнесе и у него уже был работы с разными подрядчиками, которые оказывали ему услуги по ведению бухгалтерии. Так же был опыт бухгалтера в штате. Когда в очередной раз возникли проблемы с текущим подрачиком, Глеб решил найти альтернативу.</div>
+              <div class="testimonials_item_strategy">
+                <div class="testimonials_item_strategy_cel"><img src="./img/svg/pricel.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Цель работы</div>
+                  <div class="testims_info">Найти надежного подрядчика, который будет настоящим профессионалом в своем деле.</div>
+                </div>
+                <div class="testimonials_item_strategy_str"><img src="./img/svg/strategy.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Стратегия</div>
+                  <div class="testims_info">
+                    Оперативность
+                    Пунтктуальность
+                    Опыт
+                  </div>
+                </div>
+                <div class="testimonials_item_strategy_result"><img src="./img/svg/result.svg" alt="" class="testims_img"/>
+                  <div class="testims_name">Результат</div>
+                  <div class="testims_info">Описание опыта, примеров взаимодесвия, список компаний, которые уже сотрудничают.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider2-button-next testimonials_arrow__next arrow__next"></div>
+          <div class="slider2-button-prev testimonials_arrow__prev arrow__prev"></div>
+        </div>
+      </div>
     </div>
     <div class="full_width full_width__grey our_team">
       <div class="big_heading">наша команда</div>
@@ -138,6 +286,7 @@
         <div id="totop" class="return_totop"></div>
       </div>
     </footer>
+    <div class="loading_resources"></div>
     <script src="components/jquery/dist/jquery.js"></script>
     <script src="components/swiper/dist/js/swiper.js"></script>
     <script src="components/waypoints/lib/noframework.waypoints.js"></script>

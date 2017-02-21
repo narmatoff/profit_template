@@ -1,6 +1,10 @@
 Pace.on('done', function() {
     console.log('main.js ready!');
-    var swiper = new Swiper('.swiper-container', {
+
+    $('.loading_resources').css('height', '0%');
+
+
+    var swiper = new Swiper('.call_backs', {
         nextButton: '.slider-button-next',
         prevButton: '.slider-button-prev',
         // pagination: '.swiper-pagination',
@@ -8,6 +12,7 @@ Pace.on('done', function() {
         // Disable preloading of all images
         preloadImages: false,
         // Enable lazy loading
+        autoplay:5000,
         slidesPerView: 3,
         spaceBetween: 70,
         lazyLoading: true,
@@ -33,6 +38,16 @@ Pace.on('done', function() {
         //     //     spaceBetween: 10
         //     // }
         // }
+    });
+
+    var swiper2 = new Swiper('.testimonials-container', {
+        nextButton: '.slider2-button-next',
+        prevButton: '.slider2-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        autoplay:5000,
+        effect:'flip',
+        spaceBetween: 30
     });
 
 

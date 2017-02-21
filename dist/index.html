@@ -9,8 +9,21 @@
     <meta name="news_date" content="2016-05-01" scheme="YYYY-MM-DD"/>
     <meta name="keywords" content="HTML,CSS,XML,JavaScript"/>
     <meta name="author" content="lum.ru"/>
+    <style>
+      .loading_resources{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      z-index: 99;
+      display: block;
+      transition:all ease .8s;
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-flash.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-center-simple.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="components/swiper/dist/css/swiper.css"/>
   </head>
@@ -128,8 +141,8 @@
           </div>
         </div>
       </div>
-      <div class="slider-button-next call_backs_arrow__next"></div>
-      <div class="slider-button-prev call_backs_arrow__prev"></div>
+      <div class="slider-button-next call_backs_arrow__next arrow__next"></div>
+      <div class="slider-button-prev call_backs_arrow__prev arrow__prev"></div>
     </div>
     <div class="full_width full_width__grey our_team">
       <div class="big_heading">наша команда</div>
@@ -208,6 +221,7 @@
         <div id="totop" class="return_totop"></div>
       </div>
     </footer>
+    <div class="loading_resources"></div>
     <script src="components/jquery/dist/jquery.js"></script>
     <script src="components/swiper/dist/js/swiper.js"></script>
     <script src="components/waypoints/lib/noframework.waypoints.js"></script>

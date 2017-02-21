@@ -71,7 +71,7 @@ gulp.task('jade', function() {
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(gulp.dest('dist/'));
-        // .pipe(notify("jade готов!"));
+    // .pipe(notify("jade готов!"));
 });
 
 // fonts
@@ -128,7 +128,7 @@ gulp.task('lint_mainjs', function() {
         }))
         .pipe(gulp.dest('dist/js'))
         .pipe(size());
-        // .pipe(notify("js готов!"));
+    // .pipe(notify("js готов!"));
 });
 // gulp.task('lint_mainjs', function() {
 //     return gulp.src('src/js_src/paceoptions.js')
@@ -191,13 +191,14 @@ gulp.task('sass', function() {
         .pipe(size())
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("sass готов!"));
+    // .pipe(notify("sass готов!"));
 });
 // спрайты
+
 gulp.task('sprite', function() {
     // Generate our spritesheet
     var spriteData = gulp.src('src/images/forsprts/*.png')
-        .pipe(changed('dist/img'))
+        // .pipe(changed('dist/img'))
 
     // .pipe(plumber())
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
@@ -218,13 +219,13 @@ gulp.task('sprite', function() {
     // Pipe CSS stream through CSS optimizer and onto disk
     var cssStream = spriteData.css
         // .pipe(csso())
-        .pipe(gulp.dest('src/sass'))
-        .pipe(size());
+        .pipe(gulp.dest('src/sass'));
+        // .pipe(size());
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("sprite готов!"));
+    // .pipe(notify("sprite готов!"));
 });
 // svgsprites
 // gulp.task('svgsprites', function() {
@@ -253,7 +254,7 @@ gulp.task('imagemin', function() {
         .pipe(size())
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("imagemin готов!"));
+    // .pipe(notify("imagemin готов!"));
 });
 
 // image
@@ -281,7 +282,7 @@ gulp.task('image', function() {
         .pipe(size())
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("image done"));
+    // .pipe(notify("image done"));
 });
 
 // svgmin
@@ -304,7 +305,7 @@ gulp.task('svgmin', function() {
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'))
         .pipe(size());
-        // .pipe(notify("svgmin готов!"));
+    // .pipe(notify("svgmin готов!"));
 });
 // bower
 gulp.task('bower', function() {
@@ -320,7 +321,7 @@ gulp.task('bower', function() {
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("bower готов!"));
+    // .pipe(notify("bower готов!"));
 });
 
 // connect
@@ -393,4 +394,4 @@ gulp.task('watch', function() {
     livereload.listen();
 });
 // default
-gulp.task('default', ['jade', 'sprite', 'fonts', 'sass', 'bower', 'lint_mainjs', 'image', 'svgmin', 'watch', 'connect']);
+gulp.task('default', ['sprite', 'jade', 'fonts', 'sass', 'bower', 'lint_mainjs', 'image', 'svgmin', 'watch', 'connect']);
