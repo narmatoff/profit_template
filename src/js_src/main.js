@@ -68,6 +68,12 @@ Pace.on('done', function() {
         gutter: 11
     });
 
+    $('.cert_list').packery({
+        // options...
+        itemSelector: '.cert_list_item',
+        gutter: 20
+    });
+
     // $(document).bind('mousewheel', function(e) {
     //     var nt = $(document.body).scrollTop() - (e.originalEvent.wheelDeltaY);
     //     e.preventDefault();

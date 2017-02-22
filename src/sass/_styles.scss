@@ -252,6 +252,13 @@ select {
         // max-height: 966px;
         // min-height: 100vh;
     }
+    &__darker {
+        background-color: #2e3030;
+        width: 100%;
+        color: $lightFontColor;
+        // max-height: 966px;
+        // min-height: 100vh;
+    }
     &__white {
         background-color: $lightFontColor;
         width: 100%;
@@ -374,7 +381,7 @@ header {
             // text-align: center;
             width: 680px;
             height: 94px;
-            overflow:hidden;
+            overflow: hidden;
             margin: 27px auto 0 auto;
         }
         &_strategy {
@@ -756,7 +763,10 @@ header {
     position: relative;
     z-index: 2;
     &_white {
-        color: #fff;
+        color: $lightFontColor;
+    }
+    &_black {
+        color: $darkFontColor;
     }
 }
 
@@ -1021,8 +1031,8 @@ header {
 }
 
 .our_partners {
-    padding: 122px 1em 0 1em;
-    height: 411px;
+    padding: 122px 1em 7.5em 1em;
+    min-height: 411px;
 }
 
 .logo_list {
@@ -1039,11 +1049,127 @@ header {
     }
 }
 
+.a_img_hoverer {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        transition: all ease .5s;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+        transition: all ease .2s;
+    }
+    &:hover {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-15px);
+            z-index: 2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            background-image: url(../img/img_zoom_hover.png);
+            background-repeat: no-repeat;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-15px);
+            width: 53px;
+            height: 53px;
+            z-index: 3;
+        }
+    }
+}
+
+.cert_list {
+    max-width: 1732px;
+    margin: 71px auto;
+    // outline:1px dotted red;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    &_item {
+        margin: 0 0 2em 0;
+        // margin:0 60px 0 60px;
+        position: relative;
+        height: 334px;
+        width: 230px;
+        // &:after {
+        //     content: '';
+        //     position: absolute;
+        //     top: 15px;
+        //     left: 0;
+        //     transition: all ease .2s;
+        // }
+        // &:before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     margin: -25px 0 0 -25px;
+        //     transition: all ease .2s;
+        // }
+        // &:hover {
+        //     &:after {
+        //         content: '';
+        //         position: absolute;
+        //         top: 15px;
+        //         left: 0;
+        //         background-color: rgba(0, 0, 0, 0.7);
+        //         display: block;
+        //         width: 100%;
+        //         height: 100%;
+        //         transform: translateY(-15px);
+        //         z-index: 2;
+        //     }
+        //     &:before {
+        //         content: '';
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         margin: -25px 0 0 -25px;
+        //         background-image: url(../img/img_zoom_hover.png);
+        //         background-repeat: no-repeat;
+        //         display: block;
+        //         width: 100%;
+        //         height: 100%;
+        //         transform: translateY(-15px);
+        //         width: 53px;
+        //         height: 53px;
+        //         z-index: 3;
+        //     }
+        // }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}
+
 .questions {
     padding: 122px 0 0 0;
     height: 559px;
     &_text {
-        max-width: 361px;
+        max-width: 365px;
         margin: 1em auto 3em auto;
         font-family: $openSans;
         color: $darkFontColor;
@@ -1051,6 +1177,12 @@ header {
         // font-weight: 400;
         line-height: 24px;
         text-align: center;
+        &_white {
+            color: $lightFontColor;
+        }
+        &_black {
+            color: $darkFontColor;
+        }
     }
     &_button {
         // max-width:11em;
