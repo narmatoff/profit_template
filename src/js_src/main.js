@@ -56,7 +56,7 @@ Pace.on('done', function() {
     scrollDiv.click(function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });
-    var scrollDiv2 = $(".arrow_bottom__header");
+    var scrollDiv2 = $(".arrow_bottom");
     scrollDiv2.click(function() {
         $("html, body").animate({ scrollTop: 770 }, "slow");
     });
