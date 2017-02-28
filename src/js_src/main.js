@@ -12,7 +12,7 @@ Pace.on('done', function() {
         // Disable preloading of all images
         preloadImages: false,
         // Enable lazy loading
-        autoplay:5000,
+        autoplay: 5000,
         slidesPerView: 3,
         spaceBetween: 70,
         lazyLoading: true,
@@ -45,21 +45,27 @@ Pace.on('done', function() {
         prevButton: '.slider2-button-prev',
         slidesPerView: 1,
         paginationClickable: true,
-        autoplay:5000,
-        effect:'flip',
+        autoplay: 5000,
+        effect: 'flip',
         spaceBetween: 30
     });
 
 
     // подняться наверх
     var scrollDiv = $("#totop");
-    scrollDiv.click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+    $(scrollDiv).click(function() {
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
     });
+
+
+
     var scrollDiv2 = $(".arrow_bottom");
-    scrollDiv2.click(function() {
-        $("html, body").animate({ scrollTop: 770 }, "slow");
+    $(scrollDiv2).click(function() {
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 1000, 'easeOutQuad');
     });
+
+
+
 
 
     $('.category_wr').packery({
@@ -83,7 +89,48 @@ Pace.on('done', function() {
     //     }, 300);
     // });
 
+    // скрываем меню при скроле вниз
+    var menuoffsettop = $(".top_nav").offset().top;
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > menuoffsettop) {
+            $(".top_nav").css({
+                "top": "-90px"
+            });
+
+        } else {
+            $(".top_nav").css({
+                "top": "0"
+            });
+
+        }
+    });
+
+    // показываем меню после #showmenuhere
+    var waypoint = new Waypoint({
+        element: document.getElementById('showmenuhere'),
+        handler: function(direction) {
+            if (direction == 'down') {
+                $(".top_nav").addClass("top_nav__fixed");
+            } else {
+                $(".top_nav").removeClass("top_nav__fixed");
+            }
+        }
+    });
+
+
+
     var s = skrollr.init({
         smoothScrolling: true
     });
+
+
+
+
+
+
+
+
+
+
+
 });
