@@ -204,7 +204,7 @@ gulp.task('sprite', function() {
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(spritesmith({
             imgName: 'sprite.png',
-            imgPath: "/dist/img/sprite.png",
+            imgPath: "../img/sprite.png",
             cssName: '_sprite.scss',
             cssFormat: "scss",
             // padding: "2",
