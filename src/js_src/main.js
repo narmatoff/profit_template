@@ -68,11 +68,11 @@ Pace.on('done', function() {
 
 
 
-    $('.category_wr').packery({
-        // options...
-        itemSelector: '.category_item',
-        gutter: 11
-    });
+    // $('.category_wr').packery({
+    //     // options...
+    //     itemSelector: '.category_item',
+    //     gutter: 11
+    // });
 
     $('.cert_list').packery({
         // options...
