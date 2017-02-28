@@ -204,7 +204,9 @@
       </form>
     </div>
     <div class="full_width full_width__white main_contacts">
-      <div class="main_contacts_map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      <div class="main_contacts_map">
+        <div onClick="style.pointerEvents='none'" class="map_overlay"></div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
       <div class="main_contacts_info">
         <div class="main_contacts_info_block">
           <div class="big_heading big_heading_white contacts_list_heading">Контакты</div>
@@ -230,8 +232,15 @@
     <script src="components/skrollr/src/skrollr.js"></script>
     <script src="components/jquery.easing/js/jquery.easing.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/packery/2.1.1/packery.pkgd.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
     <script src="js/all.min.js"></script>
+    <div class="callback_block">
+      <div class="callback_block_trigger"></div>
+      <form action="">
+        <input type="text" placeholder="Перезвоните мне"/>
+        <input type="text" placeholder="+7 _ _ _  _ _ _  _ _  _ _"/>
+        <input type="button" value="Перезвоните мне" class="button button__yellow"/>
+      </form>
+    </div>
     <ul class="tmp_nav">
       <li><a href="index.html">Главная</a></li>
       <li><a href="about.html">О нас</a></li>
