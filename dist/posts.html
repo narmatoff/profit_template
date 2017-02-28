@@ -1,0 +1,137 @@
+<!DOCTYPE html/>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Профит</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+    <meta name="description" content="Предоставление услуг связи"/>
+    <meta name="news_date" content="2016-05-01" scheme="YYYY-MM-DD"/>
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript"/>
+    <meta name="author" content="lum.ru"/>
+    <style>
+      .loading_resources{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      z-index: 99;
+      display: block;
+      transition:all ease .8s;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/pace/1.0.2/themes/yellow/pace-theme-center-simple.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="components/swiper/dist/css/swiper.css"/>
+  </head>
+  <body>
+    <header class="notmain_header_two">
+      <div class="top_nav_wr">
+        <div class="top_nav">
+          <div class="top_nav__address"><span>Санкт-Петербург</span><span>Магнитогорская 51 лит А офис 309</span><a href="#">смотреть на карте</a></div>
+          <ul class="top_nav__menu">
+            <li class="selected_menuitem"><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Полезная информация</a></li>
+            <li><a href="#">Вопрос/ответ</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="middle_nav">
+        <div class="middle_nav__slogan">декларации</div>
+      </div>
+      <div class="arrow_bottom arrow_bottom__hdrnotmain"></div>
+    </header>
+    <div id="showmenuhere" class="main_width content_wr">
+      <ul class="breadcrumbs">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li>Декларации</li>
+      </ul>
+      <div class="tags_block_content"><a href="#">Статьи по теме налговой отчётности</a><a href="#">Восстановление налогового и бухучёта</a><a href="#">Бухотчётность, основные формы</a><a href="#">Анализ и ацдит бухотчётности</a><a href="#">Налоговая отчётность по упрощёнке</a><a href="#">Поставнока налогового и бухучёта</a></div>
+      <section>
+        <article>
+          <div class="post_heading">
+            <div class="post_date"><span>23</span><span>авг</span></div>
+            <div class="post_header"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum. laoreet.</a></div>
+          </div>
+          <div class="post_tags">
+            <div class="tags_block_content"><a href="#">юридическая помощь</a><a href="#">бухгалтерия</a><a href="#">налоги</a></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi harum ipsam nostrum sint repellat minima modi, quidem culpa quam tempore vitae, placeat deserunt animi omnis adipisci enim et quae dolor praesentium. Vitae ab rem repellat quidem impedit voluptatum dicta magni.</p>
+        </article>
+        <article>
+          <div class="post_heading">
+            <div class="post_date"><span>14</span><span>авг</span></div>
+            <div class="post_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum. laoreet.</div>
+          </div>
+          <div class="post_tags">
+            <div class="tags_block_content"><a href="#">юридическая помощь</a><a href="#">бухгалтерия</a><a href="#">налоги</a></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi harum ipsam nostrum sint repellat minima modi, quidem culpa quam tempore vitae, placeat deserunt animi omnis adipisci enim et quae dolor praesentium. Vitae ab rem repellat quidem impedit voluptatum dicta magni.</p>
+        </article>
+        <article>
+          <div class="post_heading">
+            <div class="post_date"><span>1</span><span>авг</span></div>
+            <div class="post_header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum. laoreet.</div>
+          </div>
+          <div class="post_tags">
+            <div class="tags_block_content"><a href="#">юридическая помощь</a><a href="#">бухгалтерия</a><a href="#">налоги</a></div>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi harum ipsam nostrum sint repellat minima modi, quidem culpa quam tempore vitae, placeat deserunt animi omnis adipisci enim et quae dolor praesentium. Vitae ab rem repellat quidem impedit voluptatum dicta magni.</p>
+        </article>
+      </section>
+    </div>
+    <div class="full_width full_width__darker questions">
+      <div class="big_heading big_heading_white">есть вопросы?</div>
+      <div class="questions_text questions_text_white">Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса</div>
+      <form action="">
+        <input type="text" placeholder="Ваше имя" class="questions_input"/>
+        <input type="text" placeholder="+7 _ _ _  _ _ _  _ _  _ _" class="questions_input"/>
+        <input type="button" value="Получить консультацию" class="button button__yellow button__centered questions_button"/>
+      </form>
+    </div>
+    <div class="full_width full_width__white main_contacts">
+      <div class="main_contacts_map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+      <div class="main_contacts_info">
+        <div class="main_contacts_info_block">
+          <div class="big_heading big_heading_white contacts_list_heading">Контакты</div>
+          <div class="contacts_list">
+            <div class="contacts_list_adr">Санкт-Петербург, улица Магнитогорская, 51, лит A, офис 309</div>
+            <div class="contacts_list_phone">Тел.: 8 (812) 336 36 36</div>
+            <div class="contacts_list_email">E-mail: profit@mail.ru</div>
+            <div class="contacts_list_time">Режим работы:<br/>пн. - пт.: 9:00 - 18:00<br/>сб. - вс.: выходной</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="full_width">
+      <div class="footer_content">
+        <div class="footer_content_cprt">© «Профит» Бухгалтерские и юридические услуги в Санкт-Петербурге</div>
+        <div id="totop" class="return_totop"></div>
+      </div>
+    </footer>
+    <div class="loading_resources"></div>
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/swiper/dist/js/swiper.js"></script>
+    <script src="components/waypoints/lib/noframework.waypoints.js"></script>
+    <script src="components/skrollr/src/skrollr.js"></script>
+    <script src="components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/packery/2.1.1/packery.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <ul class="tmp_nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="about.html">О нас</a></li>
+      <li><a href="uslugi.html">Услуги</a></li>
+      <li><a href="posts.html">Статьи</a></li>
+      <li><a href="post.html">Статья    </a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </body>
+</html>

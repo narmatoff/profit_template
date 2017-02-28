@@ -111,7 +111,7 @@ Pace.on('done', function() {
         handler: function(direction) {
             if (direction == 'down') {
                 $(".top_nav_wr").addClass("top_nav__fixed");
-            } else {
+            } else if (direction == 'up') {
                 $(".top_nav_wr").removeClass("top_nav__fixed");
             }
         }
@@ -125,11 +125,7 @@ Pace.on('done', function() {
 
 
 
-var s = skrollr.init();
-
-
-
-
+    var s = skrollr.init();
 
 
 
