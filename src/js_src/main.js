@@ -90,15 +90,15 @@ Pace.on('done', function() {
     // });
 
     // скрываем меню при скроле вниз
-    var menuoffsettop = $(".top_nav").offset().top;
+    var menuoffsettop = $(".top_nav_wr").offset().top;
     $(window).scroll(function() {
         if ($(window).scrollTop() > menuoffsettop) {
-            $(".top_nav").css({
+            $(".top_nav_wr").css({
                 "top": "-90px"
             });
 
         } else {
-            $(".top_nav").css({
+            $(".top_nav_wr").css({
                 "top": "0"
             });
 
@@ -110,22 +110,22 @@ Pace.on('done', function() {
         element: document.getElementById('showmenuhere'),
         handler: function(direction) {
             if (direction == 'down') {
-                $(".top_nav").addClass("top_nav__fixed");
+                $(".top_nav_wr").addClass("top_nav__fixed");
             } else {
-                $(".top_nav").removeClass("top_nav__fixed");
+                $(".top_nav_wr").removeClass("top_nav__fixed");
             }
         }
     });
 
 
 
-    var s = skrollr.init({
-        smoothScrolling: true
-    });
+    // var s = skrollr.init({
+    //     smoothScrolling: true
+    // });
 
 
 
-
+var s = skrollr.init();
 
 
 
