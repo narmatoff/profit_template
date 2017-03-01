@@ -1,6 +1,7 @@
 ### README ###
 
 # Исходники шаблона в папке: #
+
 ```
 SRC
 ```
@@ -11,6 +12,7 @@ DIST
 ```
 
 # Используемые зависимости #
+
 * "jquery": "^3.1.1" (http://api.jquery.com/)
 * "swiper": "^3.4.1" (http://www.idangero.us/swiper/get-started/)
 * "waypoints": "^4.0.1" (http://imakewebthings.com/waypoints/guides/getting-started)
@@ -22,6 +24,7 @@ DIST
 ## Некоторые инструкции ##
 
 Для плавных якорей до объекта использовать:
+
 ```
     var VarNameOfAnchor = $("селекторссылкиякоря");
     $(VarNameOfAnchor).click(function() {
@@ -30,6 +33,7 @@ DIST
     ```
 
 Для плавных якорей до объекта использовать:
+
 ```
 var VarNameOfAnchor = $("селекторссылкиякоря");
 $(VarNameOfAnchor).click(function() {
@@ -38,11 +42,13 @@ $(VarNameOfAnchor).click(function() {
 ```
 
 Маски для инпутов, пример:
+
 ```
 <input type="text" data-inputmask="'mask': '+7 (999)-999-99-99'"/>
 ```
 
 Анимированные блоки при ресайзе вьюпорта
+
 ```
 $('селекторродителяспискаблоков').packery({
     // options...
@@ -52,11 +58,13 @@ $('селекторродителяспискаблоков').packery({
 ```
 
 Для галереи всплывающих окон использовать класс для родителя списка
+
 ```
 .magnific_gallery
 ```
 
 Для всплывающих окон использовать класс для элемента списка
+
 ```
 .magnific_img
 ```
