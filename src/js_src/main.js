@@ -61,7 +61,7 @@ Pace.on('done', function() {
 
     var scrollDiv2 = $(".arrow_bottom");
     $(scrollDiv2).click(function() {
-        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 1000, 'easeOutQuad');
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 2000, 'easeInOutExpo');
     });
 
 
