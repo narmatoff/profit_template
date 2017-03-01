@@ -32,15 +32,6 @@ var VarNameOfAnchor = $("селекторссылкиякоря");
     });
 ```
 
-Для плавных якорей до объекта использовать:
-
-```
-var VarNameOfAnchor = $("селекторссылкиякоря");
-$(VarNameOfAnchor).click(function() {
-    jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("селекторобъектаузладомдокторогонеобъодимодобраться").offset().top }, 2000, 'easeInOutExpo');
-});
-```
-
 Маски для инпутов, пример:
 
 ```
