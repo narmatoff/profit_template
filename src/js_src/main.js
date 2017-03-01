@@ -196,4 +196,9 @@ Pace.on('done', function() {
         }
     });
 
+
+    $('.inputmask_phone').inputmask({ "mask": "+7 (999) 999-99-99" }); //specifying options
+    // $(selector).inputmask("99-9999999"); //static mask
+    // $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+
 });
