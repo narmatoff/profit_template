@@ -26,11 +26,11 @@ DIST
 Для плавных якорей до объекта использовать:
 
 ```
-    var VarNameOfAnchor = $("селекторссылкиякоря");
+var VarNameOfAnchor = $("селекторссылкиякоря");
     $(VarNameOfAnchor).click(function() {
         jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("селекторобъектаузладомдокторогонеобъодимодобраться").offset().top }, 2000, 'easeInOutExpo');
     });
-    ```
+```
 
 Для плавных якорей до объекта использовать:
 
