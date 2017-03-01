@@ -1,8 +1,11 @@
+html {
+    overflow-y: scroll !important;
+}
+
 body {
     height: 100%;
     margin: 0 auto;
     font-family: $fregat;
-    // overflow: hidden;
     min-width: 1160px;
 }
 
@@ -1721,7 +1724,7 @@ footer {
     top: 15%;
     right: -357px;
     z-index: 99999999999;
-    transition:all ease .4s;
+    transition: all ease .4s;
     &_expand {
         right: 0;
     }
@@ -1753,4 +1756,68 @@ footer {
         width: 260px;
         height: 37px;
     }
+}
+
+// модальные окна
+/////////////////////////////////////////////////////////////
+// mainClass: 'mfp-fade'
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+// /* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+
+// /* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+// /* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+
+// /* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+}
+
+// /* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+}
+
+///////////////////////////////////////////////////////////////////////////
+// mainClass: 'mfp-with-zoom'
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    // /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
 }
