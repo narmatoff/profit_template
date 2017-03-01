@@ -1,16 +1,16 @@
 ### README ###
 
-# Исходники шаблона в папке:
+# Исходники шаблона в папке: #
 ```
 SRC
 ```
 
-# Файлы для продакшина в папке:
+# Файлы для продакшина в папке: #
 ```
 DIST
 ```
 
-# Используемые зависимости
+# Используемые зависимости #
 * "jquery": "^3.1.1" (http://api.jquery.com/)
 * "swiper": "^3.4.1" (http://www.idangero.us/swiper/get-started/)
 * "waypoints": "^4.0.1" (http://imakewebthings.com/waypoints/guides/getting-started)
@@ -19,7 +19,7 @@ DIST
 * "magnific-popup": "^1.1.0" (https://travis-ci.org/dimsemenov/Magnific-Popup)
 * "jquery.inputmask": "^3.3.4" (http://robinherbots.github.io/jquery.inputmask)
 
-## Некоторые инструкции
+## Некоторые инструкции ##
 
 Для плавных якорей до объекта использовать:
 ```
