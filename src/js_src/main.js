@@ -138,7 +138,7 @@ Pace.on('done', function() {
     // Модальные окна
     /////////////////////////////////////////////////////////////////////////////////////////////////////
     // Галерея картинок
-    $('.magnific_gallary').each(function() { // the containers for all your galleries
+    $('.magnific_gallery').each(function() { // the containers for all your galleries
         $(this).magnificPopup({
             delegate: 'a', // the selector for gallery item
             type: 'image',
