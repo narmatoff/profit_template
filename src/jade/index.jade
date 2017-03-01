@@ -195,7 +195,7 @@ html(lang="ru")
             .questions_text Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса
             form(action="")
                 input(type="text",placeholder="Ваше имя").questions_input
-                input.inputmask_phone(type="text",placeholder='+7 (___) ___-__-__').questions_input
+                input(type="text",placeholder='+7 (___) ___-__-__',data-inputmask="'mask': '+7 (999)-999-99-99'").questions_input
                 input(type="button",value="Получить консультацию").button.button__yellow.button__centered.questions_button
         
         .full_width.full_width__white.main_contacts
