@@ -166,7 +166,7 @@ gulp.task('sass', function() {
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(size())
         // .pipe(plumber())
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(sass({
             // paths: [path.join(__dirname, 'src/sass/includes')],
             includePaths: ['.'],

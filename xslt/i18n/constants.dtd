@@ -1,0 +1,153 @@
+<!ENTITY callbackformId "137">
+<!ENTITY requestformId "135">
+<!ENTITY bronformId "139">
+<!ENTITY maincategoryId "5">
+<!ENTITY reviewsId "0">
+<!ENTITY contactsId "9999">
+<!ENTITY aboutId "14">
+<!ENTITY newsId "7">
+<!ENTITY main-menu "741">
+
+<!ENTITY main_photo_guide "118">
+<!ENTITY content_photo_guide "119">
+
+
+<!ENTITY districtId "125">
+<!ENTITY metroId "126">
+<!ENTITY class_realtyId "138">
+
+<!ENTITY spec_offerss "Специальные предложения">
+<!ENTITY spec_offers "484">
+
+<!ENTITY contact-type "134">
+<!ENTITY category-type "146">
+
+<!ENTITY nbsp "&#160;">
+
+
+<!ENTITY call-btn "Обратный звонок">
+
+<!ENTITY print "распечатать">
+
+
+<!ENTITY prev-plan "Предыдущая планировка">
+<!ENTITY next-plan "Следующая планировка">
+
+<!ENTITY akciya "акция">
+
+<!ENTITY u_see "Вы недавно смотрели:">
+
+<!ENTITY search-appartaments "поиск по квартирам">
+
+
+<!ENTITY about "о компании">
+<!ENTITY last-news "свежая новость">
+<!ENTITY all-news "Все новости">
+<!ENTITY all "Все">
+
+<!ENTITY reviews "отзывы">
+<!ENTITY all-reviews "Все отзывы">
+<!ENTITY read-full "читать целиком">
+
+<!ENTITY submit-request "Оставить заявку">
+<!ENTITY submit-request-wat "на подбор<br/>недвижимости">
+<!ENTITY podrobn "Подробнее">
+
+<!ENTITY u-bookmarks "ваши закладки">
+<!ENTITY not-bookmarks "У вас нет закладок!">
+<!ENTITY add-bookmark "Добавить в закладки">
+<!ENTITY del-bookmark "Удалить из закладок">
+
+<!ENTITY popular-links "Популярные запросы">
+<!ENTITY district-links "По районам">
+<!ENTITY apartments-links "Квартиры у метро">
+<!ENTITY class_realty-links "Классификация недвижимости">
+
+<!ENTITY special_offers "<span>специальные</span> предложения">
+<!ENTITY subscribe_do "подписаться на рассылку предложений">
+<!ENTITY show_spec_offers "Показать ещё спецпредложения">
+
+<!ENTITY u_email "Ваш e-mail">
+<!ENTITY subscribe "подписаться">
+<!ENTITY jk-no "Жилищных комплексов не найдено!">
+
+<!ENTITY subscribe "подписаться">
+
+
+<!ENTITY copyraight "© 2014 «Мегаполис»">
+<!ENTITY copy-astra "Сайт разработан в студии">
+
+<!ENTITY send "отправить">
+<!ENTITY suffix " руб">
+<!ENTITY suffix-appart " к. кв.">
+
+<!ENTITY podbor "Подбор квартиры">
+<!ENTITY podbor_rajon "подбор по району">
+<!ENTITY podbor_metro "подбор по станции метро">
+<!ENTITY param "По параметрам">
+<!ENTITY po_jk "По названию ЖК">
+<!ENTITY metro "Метро">
+<!ENTITY studia "Студия">
+<!ENTITY rash_search "Расширеный поиск">
+<!ENTITY ended "Готовые">
+<!ENTITY notended "Строящиеся">
+<!ENTITY ye_end "Год сдачи">
+<!ENTITY kvar "Квартал">
+<!ENTITY s "Площадь">
+<!ENTITY s_suffix " м. кв.">
+<!ENTITY chist_otdelka "С отделкой">
+<!ENTITY ipot "Ипотека">
+<!ENTITY rassr "Рассрочка">
+<!ENTITY skidka "Скидки">
+<!ENTITY search-finish "Найдено:">
+<!ENTITY search-objects "объектов,">
+<!ENTITY search-appart "квартиры">
+<!ENTITY search-map "Поиск по карте">
+<!ENTITY enter-name "Введите название">
+<!ENTITY name "Твин Пикс">
+<!ENTITY podobr "подобрать">
+<!ENTITY save "сохранить">
+
+
+<!ENTITY search-default-text "Поиск">
+
+<!ENTITY enter-captcha "Введите код с картинки">
+
+<!ENTITY page "Страница">
+<!ENTITY main "Главная">
+<!ENTITY page-lower-case "cтраница">
+
+<!ENTITY previous-page "Предыдущая">
+<!ENTITY next-page "Следующая">
+
+<!ENTITY default-date-format "d.m.Y">
+<!ENTITY empty-photo "/images/design/nofoto.jpg">
+
+<!ENTITY empty "Пусто">
+<!ENTITY empty-site-name "Название сайта">
+<!ENTITY empty-section-name "Название раздела">
+<!ENTITY empty-page-name "Название страницы">
+<!ENTITY empty-page-date "Дата создания">
+<!ENTITY empty-page-anons "Анонс новости">
+<!ENTITY empty-page-content "Содержание страницы">
+<!ENTITY empty-category "Товары отсутствуют">
+<!ENTITY empty-comment "Комментарии отсутствуют">
+
+<!ENTITY question "Вопрос">
+<!ENTITY answer "Ответ">
+
+
+<!ENTITY search-founded-left "По вашему запросу">
+<!ENTITY search-founded-right "найдено страниц">
+<!ENTITY search-founded-nothing "ничего не найдено">
+
+<!ENTITY notfound-page "404 Запрошенная Вами страница не найдена.">
+<!ENTITY errors "Возникла ошибка">
+
+
+<!ENTITY not_seeing "Возникла ошибка">
+<!ENTITY podpiska "Возникла ошибка">
+<!ENTITY bronir "Возникла ошибка">
+<!ENTITY not_seeing "Возникла ошибка">
+<!ENTITY not_seeing "Возникла ошибка">
+<!ENTITY not_seeing "Возникла ошибка">

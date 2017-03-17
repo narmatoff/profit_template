@@ -65,7 +65,26 @@ Pace.on('done', function() {
     });
 
 
+ 	$('#questions-do').click(function() {
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#questions").offset().top }, 2000, 'easeInOutExpo');
+        return false;
+    });
 
+    $('#map-do').click(function() {
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#map").offset().top }, 2000, 'easeInOutExpo');
+        return false;
+    });
+
+    $('#main_width-do').click(function() {
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 2000, 'easeInOutExpo');
+        return false;
+    });
+
+    $('.anchor').on('click', function(event) {
+    	var link = $(this).attr('href');
+        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(link).offset().top }, 2000, 'easeInOutExpo');
+    	return false;
+    });
 
 
     // $('.category_wr').packery({

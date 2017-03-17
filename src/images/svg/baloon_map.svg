@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="24px" height="34px" viewBox="0 0 24 34">
+<filter filterUnits="objectBoundingBox" x="0.00" y="0.00" width="100.00" height="97.14" id="filter0">
+<feImage x="0" y="0" width="24" height="35" preserveApectRatio="none" xlink:href="#symbol0"/>
+<feComposite in="grImage1" in2="SourceAlpha" operator="in" result="grOverlay1"/>
+<feBlend in="grOverlay1" in2="SourceGraphic" mode="normal" result="gradientOverlay1"/>
+</filter>
+<linearGradient id="linear_PSgrad_0" x1="50%" y1="0%" x2="50%" y2="100%">
+    <stop offset="0%" stop-color="rgb(43,67,172)" stop-opacity="1" />
+    <stop offset="0.244141%" stop-color="rgb(43,67,172)" stop-opacity="1" />
+    <stop offset="100%" stop-color="rgb(19,38,121)" stop-opacity="1" />
+</linearGradient>
+
+<defs>
+<rect x="0" y="0" width="24" height="35" id="symbol0" fill="url(#linear_PSgrad_0)"/></defs>
+<path fillRule="evenodd" d="M 20.12 4.36C 17.95 2.17 15.07 0.96 12 0.96 8.93 0.96 6.05 2.17 3.88 4.36-0.13 8.4-0.63 16.02 2.8 20.63 2.8 20.63 12 34.03 12 34.03 12 34.03 21.18 20.65 21.18 20.65 24.63 16.02 24.13 8.4 20.12 4.36ZM 12.11 16.67C 9.8 16.67 7.91 14.77 7.91 12.44 7.91 10.11 9.8 8.21 12.11 8.21 14.42 8.21 16.3 10.11 16.3 12.44 16.3 14.77 14.42 16.67 12.11 16.67Z" fill="rgb(0,0,0)" filter="url(#filter0)"/></svg>
