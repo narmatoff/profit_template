@@ -1,4 +1,9 @@
 header.main_header
+    //- img(src="./img/header_photo.jpg", alt="").main_header_image
+    video(autoplay,muted,loop,poster="img/working-with-espresso.png").main_header_video
+        source(src="img/working-with-espresso.mp4",type="video/mp4")
+        source(src="img/working-with-espresso.webm",type="video/webm")
+        source(src="img/working-with-espresso.ogv",type="video/ogg")
     .top_nav_wr
         .top_nav
             .top_nav__address
@@ -19,7 +24,8 @@ header.main_header
                 li
                     a(href="#") Контакты
     .middle_nav
-        .middle_nav__name ООО «Профит»
+        .middle_nav__name
+            img(src="./img/svg/profit_sova.svg", alt="")
         .middle_nav__slogan Бухгалтерские и юридические услуги
         a(href="#").button.button__yellow Получить консультацию
     .arrow_bottom.arrow_bottom__header

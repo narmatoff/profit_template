@@ -2,20 +2,21 @@
 html(lang="ru")
     include ./includes/head.jade
     body
-        include ./includes/notmain_header_two.jade
-        .main_width.content_wr#showmenuhere
-            ul.breadcrumbs
-                li
-                    a(href="#") Главная
-                li
-                    a(href="#") Услуги
-                li Декларации
-            section
-                article.contacts
-                    
-                    p(style="text-align:center") Здесь текст о том, что если у Вас возникли вопросы, то Вы всегда можете задать их по этому номеру телефона и тд. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                    a(href="tel:+78124261101").centered_big_link +7 812  426 11 01
-                    a(href="mailto:profit@mail.ru").centered_small_link profit@mail.ru
+        include ./includes/notmain_header.jade
+        .full_width.full_width__white
+            .main_width.content_wr#showmenuhere
+                ul.breadcrumbs
+                    li
+                        a(href="#") Главная
+                    li
+                        a(href="#") Услуги
+                    li Декларации
+                section
+                    article.contacts
+                        
+                        p(style="text-align:center") Здесь текст о том, что если у Вас возникли вопросы, то Вы всегда можете задать их по этому номеру телефона и тд. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+                        a(href="tel:+78124261101").centered_big_link +7 812  426 11 01
+                        a(href="mailto:profit@mail.ru").centered_small_link profit@mail.ru
 
         .full_width.full_width__white.fillw_map
             .map_tooltip
