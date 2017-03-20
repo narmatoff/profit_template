@@ -54,6 +54,28 @@
         
 	</xsl:template>
 
+
+	<!--_______________________________________________________Uslugi page review getList________________________________________________________-->
+
+    <xsl:template match="udata[@module = 'content'][@method = 'getList']" mode="uslugi-review" >
+		<xsl:if test="total > 0">
+			<xsl:apply-templates select="items" mode="uslugi-review_items"/>
+		</xsl:if>
+    </xsl:template>
+	
+	<xsl:template match="items" mode="uslugi-review_items">
+			<div class="full_width onepageslider">
+	      <div class="big_heading">мы помогли</div>
+	      <div class="swiper-container call_backs">
+	        <div class="swiper-wrapper">
+		      	<xsl:apply-templates select="item" mode="main-review_items_item"/>
+	        </div>
+	      </div>
+	      <div class="slider-button-next call_backs_arrow__next arrow__next"></div>
+	      <div class="slider-button-prev call_backs_arrow__prev arrow__prev"></div>
+	    </div>        
+	</xsl:template>
+
     <!--_______________________________________________________Main page review team________________________________________________________-->
 
     <xsl:template match="udata[@module = 'content'][@method = 'getList']" mode="main-team" >
@@ -183,6 +205,11 @@
 		                <xsl:value-of select=".//property[@name='rezultat']/value" disable-output-escaping="yes" />
 		            </div>
 		        </div>
+		    </div>
+		    <div class="testimonials_item_about">
+		    	<xsl:if test=".//property[@name='fajl_s_otzyvom']/value">
+					<a href="{.//property[@name='fajl_s_otzyvom']/value}" target="_blank">читать благодарственное письмо</a>
+		    	</xsl:if>
 		    </div>
 		</div>
 
