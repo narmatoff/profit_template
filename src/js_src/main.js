@@ -1,5 +1,4 @@
 Pace.on('done', function() {
-    console.log('main.js ready!');
 
     $('.loading_resources').css('height', '0%');
 
@@ -65,25 +64,25 @@ Pace.on('done', function() {
     });
 
 
- 	// $('#questions-do').click(function() {
-  //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#questions").offset().top }, 2000, 'easeInOutExpo');
-  //       return false;
-  //   });
+    // $('#questions-do').click(function() {
+    //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#questions").offset().top }, 2000, 'easeInOutExpo');
+    //       return false;
+    //   });
 
-  //   $('#map-do').click(function() {
-  //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#map").offset().top }, 2000, 'easeInOutExpo');
-  //       return false;
-  //   });
+    //   $('#map-do').click(function() {
+    //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $("#map").offset().top }, 2000, 'easeInOutExpo');
+    //       return false;
+    //   });
 
-  //   $('#main_width-do').click(function() {
-  //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 2000, 'easeInOutExpo');
-  //       return false;
-  //   });
+    //   $('#main_width-do').click(function() {
+    //       jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(".main_width").offset().top }, 2000, 'easeInOutExpo');
+    //       return false;
+    //   });
 
     $('.anchor').on('click', function(event) {
-    	var link = $(this).attr('href');
+        var link = $(this).attr('href');
         jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: $(link).offset().top }, 2000, 'easeInOutExpo');
-    	return false;
+        return false;
     });
 
 
@@ -215,11 +214,13 @@ Pace.on('done', function() {
         }
     });
 
+    $(document).ready(function() {
+        $(":input").inputmask();
+        // $('.inputmask_phone').inputmask({ "mask": "+7 (999) 999-99-99" }); //specifying options
+        // $(selector).inputmask("99-9999999"); //static mask
+        // $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+    });
 
-    $(":input").inputmask();
-
-    // $('.inputmask_phone').inputmask({ "mask": "+7 (999) 999-99-99" }); //specifying options
-    // $(selector).inputmask("99-9999999"); //static mask
-    // $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
+    console.debug('main.js ready!');
 
 });

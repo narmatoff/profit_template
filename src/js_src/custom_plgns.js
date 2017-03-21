@@ -1,4 +1,4 @@
 Pace.on('done', function() {
-    console.log('custom_plugins ready!');
+    console.debug('custom_plugins ready!');
     
 });

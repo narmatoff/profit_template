@@ -37,7 +37,7 @@
 				                <span umi:element-id="{$siteInfoPageId}" umi:field-name="adres">
 				                    <xsl:value-of select="$siteInfoPage//property[@name='adres']/value"/>
 				                </span>
-				                <a href="#map" id="map-do">
+				                <a href="#map" class="anchor">
 				                    смотреть на карте
 				                </a>
 				            </div>
@@ -49,7 +49,10 @@
 				    <div class="middle_nav">
 				    	<xsl:if test="$isDefault = 1">
 					        <div class="middle_nav__name">
-					            ООО «Профит»
+					        	<!-- TODO: Засунуть в шаблон -->
+					        	<img src="{$template-resources}dist/img/svg/profit_sova.svg" alt="Логотип"/>
+
+
 				           		
 					        </div>
 				    	</xsl:if>
@@ -59,15 +62,14 @@
 				        </h1>
 
 				        <xsl:if test="$pageId = &aboutId;">
-							<a href="#main_width" class="button" id="main_width-do">О компании</a>
+							<a href="#showmenuhere" class="button anchor">О компании</a>
 			    		    <a href="#clients" class="button anchor">Наши клиенты</a>
-			    		    <a href="#team" class="button" id="team-do">Сотрудники</a>
-			    		    <a href="#sert" class="button" id="sert-do">Сертификаты</a>
+			    		    <a href="#team" class="button anchor">Сотрудники</a>
+			    		    <a href="#sert" class="button anchor">Сертификаты</a>
 			    		</xsl:if>
 				    	
-				    	
 				    	<xsl:if test="$isDefault = 1">
-					        <a class="button button__yellow" href="#questions" id="questions-do">
+					        <a class="button button__yellow anchor" href="#questions" >
 					            Получить консультацию
 					        </a>
 				    	</xsl:if>
@@ -128,6 +130,9 @@
 
 			
 			    </div>
+
+			    <xsl:if test="$pageId != &contactsId;">
+			    	
 			    <div class="full_width full_width__white main_contacts">
 			      <div class="main_contacts_map" id="map">
 			      </div>
@@ -143,6 +148,7 @@
 			        </div>
 			      </div>
 			    </div>
+			    </xsl:if>
 			    <footer class="full_width">
 			      <div class="footer_content">
 			        <div class="footer_content_cprt" umi:element-id="{$siteInfoPageId}" umi:field-name="slogan_v_podvale"><xsl:value-of select="$siteInfoPage//property[@name='slogan_v_podvale']/value"/></div>

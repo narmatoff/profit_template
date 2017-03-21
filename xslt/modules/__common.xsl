@@ -5,8 +5,8 @@
 	<xsl:include href="content/__common.xsl" />
 	<xsl:include href="webforms/__common.xsl" />
 	<xsl:include href="catalog/__common.xsl" />
-<!-- 	<xsl:include href="dispatches/__common.xsl" />
 	<xsl:include href="news/__common.xsl" />
+<!-- 	<xsl:include href="dispatches/__common.xsl" />
 	<xsl:include href="photoalbum/__common.xsl" />
 	<xsl:include href="search/__common.xsl" />
 	<xsl:include href="comments/__common.xsl" />

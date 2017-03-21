@@ -1,0 +1,73 @@
+<!DOCTYPE html/>
+html(lang="ru")
+    include ./includes/head.jade
+    body
+        include ./includes/notmain_header.jade
+        .full_width.full_width__white
+            .main_width.content_wr#showmenuhere
+                ul.breadcrumbs
+                    li
+                        a(href="#") Главная
+                    li
+                        a(href="#") Услуги
+                    li Декларации
+                .tags_block_content
+                    a(href="#") Общие вопросы
+                    a(href="#") Вопросы по бух учёту
+                    a(href="#") Вопросы по налоговой отчётности
+                section
+                    article
+                        a(href="#").post_back
+                        .post_heading
+                            .post_date
+                                span 23
+                                span авг
+                            .post_header
+                                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum. laoreet.
+                        .post_author
+                            span Автор -
+                            span Степанов Андрей
+                        .post_tags
+                            .tags_block_content
+                                a(href="#") юридическая помощь
+                                a(href="#") бухгалтерия
+                                a(href="#") налоги
+                        img(src="./img/content_photo.jpg", alt="")
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                        p На краю дороги стоял дуб. Вероятно, в десять раз старше берез, составлявших лес, он был в десять раз толще и в два раза выше каждой березы. Это был огромный в два обхвата дуб с обломанными, давно видно, суками и с обломанной корой, заросшей старыми болячками. С огромными своими неуклюжими, несимметрично-растопыренными  корявыми руками и пальцами, он старым, сердитым и презрительным уродом стоял между улыбающимися березами. Только он один не хотел подчиняться обаянию весны и не хотел видеть ни весны, ни солнца.
+                        p.accent
+                            span.bolding Специфической чертой декларации как нормативно-правового акта
+                            span.italing является общий, неконкретный характер содержащихся в них положений, требующий дополнительного законодательного регулирования
+
+                        p "Весна, и любовь, и счастие!" - как будто говорил этот дуб. - И как не надоест вам все один и тот же глупый и бессмысленный обман. Все одно и то же, и все обман! Нет ни весны, ни солнца, ни счастья. Вон смотрите, сидят задавленные мертвые ели, всегда одинокие, и вон и я растопырил свои обломанные, ободранные пальцы, где ни выросли они - из спины, из боков; как выросли - так и стою, и не верю вашим надеждам и обманам".
+                        p Князь Андрей несколько раз оглянулся на этот дуб, проезжая по лесу, как будто он чего-то ждал от него. Цветы и трава были и под дубом, но он все так же, хмурясь, неподвижно, уродливо и упорно, стоял посреди их.
+                        p "Да, он прав, тысячу раз прав этот дуб, - думал князь Андрей, пускай другие, молодые, вновь поддаются на этот обман, а мы знаем жизнь, - наша жизнь кончена!" Целый новый ряд мыслей безнадежных, но грустно-приятных в связи с этим дубом, возник в душе князя Андрея. Во время этого путешествия он как будто вновь обдумал всю свою жизнь, и пришел к тому же прежнему успокоительному и безнадежному заключению, что ему начинать ничего было не надо, что он должен доживать свою жизнь, не делая зла, не тревожась и ничего не желая.
+
+
+
+        .full_width.full_width__darker.questions
+            .big_heading.big_heading_white есть вопросы?
+            .questions_text.questions_text_white Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса
+            form(action="")
+                input(type="text",placeholder="Ваше имя").questions_input
+                input(type="text",placeholder='+7 (___) ___-__-__',data-inputmask="'mask': '+7 (999)-999-99-99'").questions_input
+                input(type="button",value="Получить консультацию").button.button__yellow.button__centered.questions_button
+        
+        .full_width.full_width__white.main_contacts
+            .main_contacts_map
+                .map_overlay(onClick="style.pointerEvents='none'")
+                |<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            .main_contacts_info
+                .main_contacts_info_block
+                    .big_heading.big_heading_white.contacts_list_heading Контакты
+                    .contacts_list
+                        .contacts_list_adr Санкт-Петербург, улица Магнитогорская, 51, лит A, офис 309
+                        .contacts_list_phone Тел.: 8 (812) 336 36 36
+                        .contacts_list_email E-mail: profit@mail.ru
+                        .contacts_list_time Режим работы:
+                            br
+                            |пн. - пт.: 9:00 - 18:00
+                            br
+                            |сб. - вс.: выходной
+
+        include ./includes/footer.jade

@@ -48,7 +48,7 @@
             	</xsl:call-template>
             </div>
             <div class="callbacker_name"><xsl:value-of select="name"/></div>
-            <div class="callbacker_date"><xsl:value-of select="document(concat('udata://content/convertDate/', .//property[@name='publish_time']/value/@unix-timestamp))/udata" disable-output-escaping="yes"/></div>
+            <div class="callbacker_date"><xsl:value-of select="document(concat('udata://content/convertDate/', .//property[@name='publish_time']/value/@unix-timestamp, '/d%20F%20Y'))/udata" disable-output-escaping="yes"/></div>
             <div class="callbacker_text"><xsl:value-of select=".//property[@name='tekst_otzyva']/value" disable-output-escaping="yes" /></div>
           </div>
         
