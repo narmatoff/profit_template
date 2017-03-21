@@ -1350,9 +1350,9 @@ header {
 
 .our_certs {
     // padding: 105px 0 113px 0;
-    padding: 6.5em 0 0 0;
+    padding: 6.5em 0 1em 0;
     // /* min-height: 658px; */
-    height: 658px;
+    min-height: 658px;
     margin: 0;
 }
 
@@ -1437,10 +1437,10 @@ header {
         height: 334px;
         width: 230px;
         overflow: hidden;
-        &:first-child{
+        &:first-child {
             margin: 0 .6em 2em 0;
         }
-        &:last-child{
+        &:last-child {
             margin: 0 0 2em .6em;
         }
         // &:after {
@@ -1888,6 +1888,7 @@ footer {
 }
 
 .callback_block {
+    position: relative;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.22);
@@ -1895,19 +1896,21 @@ footer {
     background-color: #ffffff;
     width: 357px;
     height: 260px;
-    margin-left: 48px;
-    position: fixed;
-    top: 15%;
-    right: -357px;
     z-index: 99999999999;
     transition: all ease .4s;
-    &_expand {
-        right: 0;
+    &_positioned {
+        margin-left: 48px;
+        position: fixed;
+        top: 15%;
+        right: -357px;
+        &_expand {
+            right: 0;
+        }
     }
     &_trigger {
         cursor: pointer;
         position: absolute;
-        left: -48px;
+        left: -49px;
         top: 15%;
         background-color: #4159c0;
         width: 48px;
@@ -1917,6 +1920,19 @@ footer {
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
         background-position: 14px 9px;
+    }
+    &_closer {
+        right: -40px;
+        width: 36px;
+        top: 0;
+        cursor: pointer;
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        background-image: url(../img/svg/close.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        // outline:1px dotted red;
     }
     form {
         display: inline-flex;
@@ -1932,6 +1948,13 @@ footer {
         width: 260px;
         height: 37px;
     }
+    p {
+        text-align: center;
+    }
+}
+
+.mrg_centered {
+    margin: 0 auto;
 }
 
 // модальные окна

@@ -146,7 +146,7 @@ Pace.on('done', function() {
     var s = skrollr.init();
 
     $('.callback_block_trigger').click(function() {
-        $('.callback_block').toggleClass('callback_block_expand');
+        $('.callback_block').toggleClass('callback_block_positioned_expand');
     });
 
 

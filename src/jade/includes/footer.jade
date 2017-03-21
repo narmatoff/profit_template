@@ -16,12 +16,17 @@ script(src='//cdnjs.cloudflare.com/ajax/libs/packery/2.1.1/packery.pkgd.min.js')
 
 script(src="js/all.min.js")
 
-.callback_block
+.callback_block.callback_block_positioned
     .callback_block_trigger
     form(action="")
         input(type="text",placeholder='Перезвоните мне')
         input(type="text",placeholder='+7 (___) ___-__-__',data-inputmask="'mask': '+7 (999)-999-99-99'")
         input(type="button",value='Перезвоните мне').button.button__yellow
+
+//- .callback_block.mrg_centered
+//-     .callback_block_closer.mfp-close
+//-     p Мы свяжемся с вами. Наверное.
+
 
 ul.tmp_nav
     li
