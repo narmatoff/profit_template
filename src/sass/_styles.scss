@@ -1429,13 +1429,20 @@ header {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     &_item {
-        margin: 0 0 2em 0;
+        margin: 0 .6em 2em .6em;
         // margin:0 60px 0 60px;
         position: relative;
         height: 334px;
         width: 230px;
+        overflow: hidden;
+        &:first-child{
+            margin: 0 .6em 2em 0;
+        }
+        &:last-child{
+            margin: 0 0 2em .6em;
+        }
         // &:after {
         //     content: '';
         //     position: absolute;
@@ -1815,13 +1822,11 @@ footer {
 }
 
 .map_tooltip {
-    position: absolute;
+    position: relative;
     background-color: rgba(229, 189, 66, .94);
     width: 635px;
     height: 238px;
-    top: 50%;
     margin-top: -119px;
-    right: 1%;
     z-index: 99;
     padding: 53px;
     -webkit-box-sizing: border-box;
@@ -1855,6 +1860,30 @@ footer {
         // font-weight: 300;
         text-align: left;
         line-height: 10px;
+    }
+}
+
+.tmp_maptooltip_stls {
+    position: absolute;
+    top: 50%;
+    right: 1%;
+}
+
+.social_share {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3.5em 0;
+    &>span {
+        color: #363636;
+        font-size: 0.9em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        line-height: 26px;
+        text-align: left;
+        margin: 0 1.5em 0 0;
+    }
+    &_buttons {
+        width: 100%;
     }
 }
 
