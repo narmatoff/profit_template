@@ -60,52 +60,7 @@
         </li>
     </xsl:template>
 
-    
-    <!--
-    	=============================================================
-    	    					Price	
-        =============================================================
-    -->
-	<xsl:template name="price">
-	    <xsl:param name="price" select="1000"/>
-	    <xsl:choose>
-		    <!-- Тысячи -->
-	        <xsl:when test="string-length($price) = 4">
-	            <xsl:value-of select="substring($price, 1, 1)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 2, 3)"/>
-	        </xsl:when>
-	        <!-- Десятки тысяч -->
-	        <xsl:when test="string-length($price) = 5">
-	            <xsl:value-of select="substring($price, 1, 2)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 3, 3)"/>
-	        </xsl:when>
-	        <!-- Сотни тысяч -->
-	        <xsl:when test="string-length($price) = 6">
-	            <xsl:value-of select="substring($price, 1, 3)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 4, 3)"/>
-	        </xsl:when>
-	        <!-- Миллион -->
-	        <xsl:when test="string-length($price) = 7">
-	            <xsl:value-of select="substring($price, 1, 1)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 2, 3)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 5, 3)"/>
-	        </xsl:when>
-	        <!-- Десятки миллионов -->
-	        <xsl:when test="string-length($price) = 8">
-	            <xsl:value-of select="substring($price, 1, 2)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 3, 3)"/>
-	            <xsl:text> </xsl:text>
-	            <xsl:value-of select="substring($price, 6, 3)"/>
-	        </xsl:when>
-	    </xsl:choose>
-	    <xsl:text>&suffix;</xsl:text>
-	</xsl:template>
+  
 
 
 

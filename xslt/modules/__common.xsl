@@ -7,12 +7,11 @@
 	<xsl:include href="catalog/__common.xsl" />
 	<xsl:include href="news/__common.xsl" />
 	<xsl:include href="faq/__common.xsl"/>
-<!-- 	<xsl:include href="dispatches/__common.xsl" />
-	<xsl:include href="photoalbum/__common.xsl" />
-	<xsl:include href="search/__common.xsl" />
-	<xsl:include href="comments/__common.xsl" />
-	<xsl:include href="users/__common.xsl" />
-	<xsl:include href="emarket/__common.xsl"/> -->
+
+	<xsl:template match="result">
+		<xsl:value-of select="."/>
+	</xsl:template>
+
 	
 
 </xsl:stylesheet>

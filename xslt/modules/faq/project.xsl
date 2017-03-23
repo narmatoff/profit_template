@@ -115,14 +115,14 @@
     	<xsl:param name="parentsLink" />
 
 	    <div class="full_width full_width__lightgrey our_certs">
-	    	<div class="big_heading big_heading_black">Добавить вопрос</div>
+	    	<div class="big_heading big_heading_black">&add_question;</div>
 				<form action="/faq/post_question" method="post" class="form_faq">
 			        <input type="text" placeholder="Ваше имя" class="questions_input" name="nick" required="required"/>
 			        <input type="text" placeholder="Тема вопроса" class="questions_input" name="title" required="required"/>
 					<textarea name="question" class="questions_input" placeholder="Ваш вопрос" required="required"></textarea>
 			        <select name="cat" class="questions_input" required="required" id="faq_cat_id">
 			        	<option selected="selected" disabled="disabled">
-			        		<xsl:text disable-output-escaping="yes">Выберете категорию вопроса</xsl:text>
+			        		<xsl:text disable-output-escaping="yes">&select_question_cat;</xsl:text>
 			        	</option>
 			        	<xsl:apply-templates select="document(concat('udata://faq/project//', $pageCat, '/100/1'))" mode="faq_cat_option">
 			        		<xsl:with-param name="parentsLink" select="$parentsLink"/>

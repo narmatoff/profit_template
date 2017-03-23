@@ -7,7 +7,7 @@
 		
 		<!-- TODO: блок с навигацией -->
 		<!-- <xsl:apply-templates select="document('udata://stat/tagsCloud//10/10')/udata/lines" /> -->
-		<div class="main_width content_wr">
+		<div class="main_width content_wr" id="rubric">
 	      
      		<div class="tags_block_content">
      			<xsl:apply-templates select="document(concat('udata://content/getTags/', $pageId))/udata/items/item" mode="news-lents-tag"/>

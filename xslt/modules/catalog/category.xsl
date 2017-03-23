@@ -89,7 +89,7 @@
 
     <xsl:template match="property" mode="uslugi-sertifikaty">
     	<div class="full_width full_width__lightgrey our_partners">
-	      <div class="big_heading big_heading_black">Примеры документов</div>
+	      <div class="big_heading big_heading_black">&doc_example;</div>
 	      <div class="cert_list magnific_gallery">
 			<xsl:apply-templates select="value" mode="about-sertifikaty"/>
 	      </div>

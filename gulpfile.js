@@ -114,10 +114,9 @@ gulp.task('fonts', function() {
 gulp.task('lint_mainjs', function() {
     return gulp.src('src/js_src/*.js')
         .pipe(changed('dist/js'))
+        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(size())
         .pipe(concat('all.js'))
-        // .pipe(plumber())
-        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(jshint())
         .pipe(jshint.reporter('fail'))
         .pipe(connect.reload())
@@ -220,7 +219,7 @@ gulp.task('sprite', function() {
     var cssStream = spriteData.css
         // .pipe(csso())
         .pipe(gulp.dest('src/sass'));
-        // .pipe(size());
+    // .pipe(size());
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
@@ -242,9 +241,9 @@ gulp.task('sprite', function() {
 gulp.task('imagemin', function() {
     return gulp.src('src/images/*')
         .pipe(changed('dist/img'))
+        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(size())
         // .pipe(plumber())
-        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: true }],
@@ -290,9 +289,9 @@ gulp.task('svgmin', function() {
     return gulp.src('src/images/svg/**/*.svg')
         .pipe(changed('dist/img/svg'))
 
-    .pipe(size())
+    .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
+        .pipe(size())
         // .pipe(plumber())
-        .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
         .pipe(svgmin({
             js2svg: {
                 pretty: true

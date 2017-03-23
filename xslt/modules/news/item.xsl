@@ -16,7 +16,7 @@
 	            	<xsl:value-of select="page/name"/>
 	            	</div>
 	          </div>
-	          <div class="post_author"><span>Автор - </span>
+	          <div class="post_author"><span>&autor;</span>
 	          	<span>
 	          		<xsl:value-of select=".//property[@name='avtor']/value/item/@name"/>
 	          	</span>
@@ -35,7 +35,9 @@
 
 	          <xsl:value-of select=".//property[@name='content']/value" disable-output-escaping="yes" />
 
-	          <strong>поделиться</strong>
+	          <div class="social_share"><span>&share;</span>
+              <div class="social_share_buttons"><script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script><script src="//yastatic.net/share2/share.js"></script><div class="ya-share2" data-services="vkontakte,facebook,gplus" data-counter=""></div></div>
+            </div>
 	        </article>
 	      </section>
     </div>

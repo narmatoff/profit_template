@@ -13,7 +13,7 @@
 	
 	<xsl:template match="items" mode="main-review_items">
 		<div class="full_width onepageslider">
-      <div class="big_heading">отзывы наших клиентов</div>
+      <div class="big_heading">&clients_request;</div>
       <div class="swiper-container call_backs">
         <div class="swiper-wrapper">
 	      	<xsl:apply-templates select="item" mode="main-review_items_item"/>
@@ -65,7 +65,7 @@
 	
 	<xsl:template match="items" mode="uslugi-review_items">
 			<div class="full_width onepageslider">
-	      <div class="big_heading">мы помогли</div>
+	      <div class="big_heading">&we_help;</div>
 	      <div class="swiper-container call_backs">
 	        <div class="swiper-wrapper">
 		      	<xsl:apply-templates select="item" mode="main-review_items_item"/>
@@ -80,11 +80,11 @@
 
     <xsl:template match="udata[@module = 'content'][@method = 'getList']" mode="main-team" >
     	<div class="full_width full_width__grey our_team">
-	      <div class="big_heading">наша команда</div>
+	      <div class="big_heading">&our_team;</div>
 
 			<xsl:apply-templates select="items" mode="main-team_items"/>
 
-	      <a href="{document(concat('upage://', &aboutId;))/udata/page/@link}" class="button button__yellow button__centered about_button">Узнать о нас больше</a>
+	      <a href="{document(concat('upage://', &aboutId;))/udata/page/@link}" class="button button__yellow button__centered about_button">&about_us;</a>
 	    </div>
     </xsl:template>
 
@@ -181,7 +181,7 @@
 		        <div class="testimonials_item_strategy_cel">
 		            <img alt="" class="testims_img" src="{$template-resources}dist/img/svg/pricel.svg"/>
 		            <div class="testims_name">
-		                Цель работы
+		                &cel;
 		            </div>
 		            <div class="testims_info">
 		               	<xsl:value-of select=".//property[@name='cel_raboty']/value" disable-output-escaping="yes" />
@@ -190,7 +190,7 @@
 		        <div class="testimonials_item_strategy_str">
 		            <img alt="" class="testims_img" src="{$template-resources}dist/img/svg/strategy.svg"/>
 		            <div class="testims_name">
-		                Стратегия
+		                &strateg;
 		            </div>
 		            <div class="testims_info">
 		                <xsl:value-of select=".//property[@name='strategiya']/value" disable-output-escaping="yes" />
@@ -199,7 +199,7 @@
 		        <div class="testimonials_item_strategy_result">
 		            <img alt="" class="testims_img" src="{$template-resources}dist/img/svg/result.svg"/>
 		            <div class="testims_name">
-		                Результат
+		                &result;
 		            </div>
 		            <div class="testims_info">
 		                <xsl:value-of select=".//property[@name='rezultat']/value" disable-output-escaping="yes" />
@@ -208,7 +208,7 @@
 		    </div>
 		    <div class="testimonials_item_about">
 		    	<xsl:if test=".//property[@name='fajl_s_otzyvom']/value">
-					<a href="{.//property[@name='fajl_s_otzyvom']/value}" target="_blank">читать благодарственное письмо</a>
+					<a href="{.//property[@name='fajl_s_otzyvom']/value}" target="_blank">&read_letter;</a>
 		    	</xsl:if>
 		    </div>
 		</div>

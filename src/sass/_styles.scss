@@ -184,7 +184,7 @@ textarea {
 }
 
 select {
-border: none;
+    border: none;
     padding: 0 1em;
     // margin: inherit;
     font-size: 0.9em;
@@ -787,7 +787,7 @@ header {
         padding: 0;
         height: 100%;
         width: 77%;
-        max-width: 812px;
+        // max-width: 812px;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -1849,6 +1849,85 @@ footer {
     text-align: center;
     display: block;
     margin: 1.2em auto 0 auto;
+}
+
+.expander {
+    // outline: 1px dotted red;
+    margin: 0 0 0.4em 0;
+    &_header {
+        background-color: $black;
+        color: #fff;
+        font-family: $openSans;
+        min-height: 57px;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        padding: 1.2em 3em 1.2em 1.5em;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+        &:after {
+            background-image: url('../img/svg/totop.svg');
+            background-repeat: no-repeat;
+            width: 23px;
+            height: 13px;
+            cursor: pointer;
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            bottom: 50%;
+            margin: -6.5px 0 0 0;
+            transform: rotate(180deg);
+            transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        &__expanded {
+            &:after {
+                background-image: url('../img/svg/totop.svg');
+                background-repeat: no-repeat;
+                width: 23px;
+                height: 13px;
+                cursor: pointer;
+                content: '';
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                bottom: 50%;
+                margin: -6.5px 0 0 0;
+                transform: rotate(0deg);
+            }
+        }
+    }
+    &_content {
+        height: 0;
+        overflow: hidden;
+        &__expanded {
+            height: auto;
+        }
+        p {
+            padding: 0 1.5em;
+        }
+        table {
+            width: 100%;
+            tr {
+                td,
+                th {
+                    background-color: #DEE3E7;
+                    color: #fff;
+                    font-family: $openSans;
+                    min-height: 57px;
+                    // text-transform: uppercase;
+                    font-size: 0.9em;
+                    padding: 1.2em 1.5em;
+                    box-sizing: border-box;
+                    position: relative;
+                    cursor: pointer;
+                    color: $darkFontColor;
+                    border: .4em solid #fff;
+                    
+                }
+            }
+        }
+    }
 }
 
 .map_tooltip {

@@ -35,6 +35,10 @@
 							</xsl:otherwise>
 						</xsl:choose>
 					</xsl:attribute>
+					<xsl:if test="$isDefault">
+						<video autoplay="autoplay" muted="muted" loop="loop" poster="{.//property[@name='izobrazhenie']/value}" class="main_header_video">	<source src="{.//property[@name='video']/value}" type="video/{.//property[@name='video']/value/@ext}"/>
+						</video>
+					</xsl:if>
 				    <div class="top_nav_wr">
 				        <div class="top_nav">
 				            <div class="top_nav__address">
@@ -45,7 +49,7 @@
 				                    <xsl:value-of select="$siteInfoPage//property[@name='adres']/value"/>
 				                </span>
 				                <a href="#map" class="anchor">
-				                    смотреть на карте
+				                    &show_map;
 				                </a>
 				            </div>
 
@@ -69,15 +73,15 @@
 				        </h1>
 
 				        <xsl:if test="$pageId = &aboutId;">
-							<a href="#showmenuhere" class="button anchor">О компании</a>
-			    		    <a href="#clients" class="button anchor">Наши клиенты</a>
-			    		    <a href="#team" class="button anchor">Сотрудники</a>
-			    		    <a href="#sert" class="button anchor">Сертификаты</a>
+							<a href="#showmenuhere" class="button anchor">&about_company;</a>
+			    		    <a href="#clients" class="button anchor">&our_client;</a>
+			    		    <a href="#team" class="button anchor">&staff;</a>
+			    		    <a href="#sert" class="button anchor">&certificate;</a>
 			    		</xsl:if>
 				    	
 				    	<xsl:if test="$isDefault = 1">
 					        <a class="button button__yellow anchor" href="#questions" >
-					            Получить консультацию
+					            &get_consult;
 					        </a>
 				    	</xsl:if>
 				    </div>
@@ -89,18 +93,20 @@
 				</header>
 				<!-- проблема главной -->
 				<xsl:apply-templates select="$errors"/>
-				<xsl:choose>
-					<xsl:when test="$isDefault = 1">
-						<xsl:call-template name="main"/>	
-					</xsl:when>
-					<xsl:otherwise>
-					    <div id="showmenuhere" class="main_width content_wr">
-							<xsl:call-template name="navi"/>
-						</div>
-							<xsl:apply-templates select="result"/>
-					</xsl:otherwise>
-				</xsl:choose>
-				
+			    
+			    <div class="full_width full_width__white">
+					<xsl:choose>
+						<xsl:when test="$isDefault = 1">
+							<xsl:call-template name="main"/>	
+						</xsl:when>
+						<xsl:otherwise>
+						    <div id="showmenuhere" class="main_width content_wr">
+								<xsl:call-template name="navi"/>
+							</div>
+								<xsl:apply-templates select="result"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</div>
 				<div  id="questions">
 					<xsl:attribute name="class">
 						<xsl:text>full_width full_width_</xsl:text>
@@ -121,7 +127,7 @@
 			      			<xsl:text> big_heading_white</xsl:text>
 			      		</xsl:if>
 			      	</xsl:attribute>
-			      		есть вопросы?
+			      		&have_question;
 			      </div>
 			      <div class="questions_text">
 			      	<xsl:attribute name="class">
@@ -130,7 +136,7 @@
 			      			<xsl:text> questions_text_white</xsl:text>
 			      		</xsl:if>
 			      	</xsl:attribute>
-			      	Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса
+			      	&long_text_main;
 			      </div>
 
 			      <xsl:apply-templates select="document('udata://webforms/add/129')/udata" mode="q-webforms"/>
@@ -145,12 +151,12 @@
 			      </div>
 			      <div class="main_contacts_info">
 			        <div class="main_contacts_info_block">
-			          <div class="big_heading big_heading_white contacts_list_heading">Контакты</div>
+			          <div class="big_heading big_heading_white contacts_list_heading">&contat;</div>
 			          <div class="contacts_list">
 			            <div class="contacts_list_adr"><span umi:element-id="{$siteInfoPageId}" umi:field-name="gorod"><xsl:value-of select="$siteInfoPage//property[@name='gorod']/value"/></span>, <span umi:element-id="{$siteInfoPageId}" umi:field-name="adres"><xsl:value-of select="$siteInfoPage//property[@name='adres']/value"/></span></div>
-			            <div class="contacts_list_phone">Тел.: <span umi:element-id="{$siteInfoPageId}" umi:field-name="telefon"><xsl:value-of select="$siteInfoPage//property[@name='telefon']/value"/></span></div>
-			            <div class="contacts_list_email">E-mail: <span umi:element-id="{$siteInfoPageId}" umi:field-name="email"><xsl:value-of select="$siteInfoPage//property[@name='email']/value"/></span></div>
-			            <div class="contacts_list_time">Режим работы:<br/><span umi:element-id="{$siteInfoPageId}" umi:field-name="rezhim_raboty"><xsl:value-of select="$siteInfoPage//property[@name='rezhim_raboty']/value" disable-output-escaping="yes"/></span></div>
+			            <div class="contacts_list_phone">&phone;: <span umi:element-id="{$siteInfoPageId}" umi:field-name="telefon"><xsl:value-of select="$siteInfoPage//property[@name='telefon']/value"/></span></div>
+			            <div class="contacts_list_email">&email;: <span umi:element-id="{$siteInfoPageId}" umi:field-name="email"><xsl:value-of select="$siteInfoPage//property[@name='email']/value"/></span></div>
+			            <div class="contacts_list_time">&work-time;:<br/><span umi:element-id="{$siteInfoPageId}" umi:field-name="rezhim_raboty"><xsl:value-of select="$siteInfoPage//property[@name='rezhim_raboty']/value" disable-output-escaping="yes"/></span></div>
 			          </div>
 			        </div>
 			      </div>

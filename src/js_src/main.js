@@ -214,12 +214,23 @@ Pace.on('done', function() {
         }
     });
 
+
+
+
+    $('.expander_header').click(function() {
+        $(this).toggleClass('expander_header__expanded');
+        $(this).next('.expander_content').toggleClass('expander_content__expanded', 800, "easeOutExpo");
+        return false;
+    });
+
+
     $(document).ready(function() {
         $(":input").inputmask();
         // $('.inputmask_phone').inputmask({ "mask": "+7 (999) 999-99-99" }); //specifying options
         // $(selector).inputmask("99-9999999"); //static mask
         // $(selector).inputmask("9-a{1,3}9{1,3}"); //mask with dynamic syntax
     });
+
 
     console.debug('main.js ready!');
 

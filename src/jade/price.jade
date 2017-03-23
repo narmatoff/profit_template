@@ -1,0 +1,93 @@
+<!DOCTYPE html/>
+html(lang="ru")
+    include ./includes/head.jade
+    body
+        include ./includes/notmain_header.jade
+        .full_width.full_width__white
+            .main_width.content_wr#showmenuhere
+                ul.breadcrumbs
+                    li
+                        a(href="#") Главная
+                    li
+                        a(href="#") Услуги
+                    li Декларации
+                .tags_block_content
+                    a(href="#") Общие вопросы
+                    a(href="#") Вопросы по бух учёту
+                    a(href="#") Вопросы по налоговой отчётности
+                section
+
+                    .expander
+                        .expander_header.expander_header__expanded ведение бухгалтерского учета ведение бухгалтерского учета ведение бухгалтерского учета
+                        .expander_content.expander_content__expanded
+                            table
+                                tr
+                                    td Ведение бухгалтерского учета до 10 операций
+                                    td от 2000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                    .expander
+                        .expander_header ведение бухгалтерского учета
+                        .expander_content
+                            table
+                                tr
+                                    td Ведение бухгалтерского учета до 10 операций
+                                    td от 2000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                    .expander
+                        .expander_header ведение бухгалтерского учета
+                        .expander_content
+                            table
+                                tr
+                                    td Ведение бухгалтерского учета до 10 операций
+                                    td от 2000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                                tr
+                                    td Ведение бухгалтерского учета до 50 операций
+                                    td от 3000 Рв месяц
+                    .expander
+                        .expander_header ведение бухгалтерского учета
+                        .expander_content
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero tempora accusantium labore cum dolor sapiente atque beatae placeat, ut officia praesentium quo nemo eaque libero dolore nisi repudiandae laborum doloribus. Amet numquam quasi quia ipsum id error commodi tempore odit.
+
+
+
+
+
+        .full_width.full_width__darker.questions
+            .big_heading.big_heading_white есть вопросы?
+            .questions_text.questions_text_white Обращайтесь и получите бесплатную консультацию о решениях для вашего бизнеса
+            form(action="")
+                input(type="text",placeholder="Ваше имя").questions_input
+                input(type="text",placeholder='+7 (___) ___-__-__',data-inputmask="'mask': '+7 (999)-999-99-99'").questions_input
+                input(type="button",value="Получить консультацию").button.button__yellow.button__centered.questions_button
+        
+        .full_width.full_width__white.main_contacts
+            .main_contacts_map
+                .map_overlay(onClick="style.pointerEvents='none'")
+                |<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7993.53999152373!2d30.308377331912524!3d59.94234664100825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1487282094047" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            .main_contacts_info
+                .main_contacts_info_block
+                    .big_heading.big_heading_white.contacts_list_heading Контакты
+                    .contacts_list
+                        .contacts_list_adr Санкт-Петербург, улица Магнитогорская, 51, лит A, офис 309
+                        .contacts_list_phone Тел.: 8 (812) 336 36 36
+                        .contacts_list_email E-mail: profit@mail.ru
+                        .contacts_list_time Режим работы:
+                            br
+                            |пн. - пт.: 9:00 - 18:00
+                            br
+                            |сб. - вс.: выходной
+
+        include ./includes/footer.jade
