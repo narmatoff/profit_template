@@ -3,10 +3,15 @@
 <!ENTITY bronformId "139">
 <!ENTITY maincategoryId "5">
 <!ENTITY reviewsId "0">
-<!ENTITY contactsId "9999">
+<!ENTITY contactsId "2">
 <!ENTITY aboutId "14">
 <!ENTITY newsId "7">
 <!ENTITY main-menu "741">
+<!ENTITY catMainId "3">
+
+
+<!ENTITY show_more "Показать ещё">
+
 
 <!ENTITY main_photo_guide "118">
 <!ENTITY content_photo_guide "119">

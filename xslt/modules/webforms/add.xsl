@@ -10,7 +10,7 @@
 
     <!--_______________________________________________________Левая плашка________________________________________________________-->
     <xsl:template match="udata[@module = 'webforms'][@method = 'add']" mode="recall-webforms">
-        <form method="post" action="{$langPrefix}/webforms/send/">
+        <form method="post" action="{$langPrefix}/webforms/send/" class="form">
             <xsl:apply-templates select="items" mode="address" />
             <xsl:apply-templates select="groups/group" mode="simple" />
             <input type="hidden" name="system_form_id" value="{/udata/@form_id}" />
@@ -21,7 +21,7 @@
 
         <!--_______________________________________________________плашка внизу страницы________________________________________________________-->
     <xsl:template match="udata[@module = 'webforms'][@method = 'add']" mode="q-webforms">
-        <form method="post" action="{$langPrefix}/webforms/send/">
+        <form method="post" action="{$langPrefix}/webforms/send/" class="form">
             <xsl:apply-templates select="items" mode="address" />
             <xsl:apply-templates select="groups/group" mode="simple-question" />
             <input type="hidden" name="system_form_id" value="{/udata/@form_id}" />

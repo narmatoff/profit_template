@@ -13,9 +13,12 @@
 	<xsl:variable name="userType" select="/result/user/@type" />
 	<xsl:variable name="userInfo" select="document(concat('uobject://', $userId))/udata" />
 	<xsl:variable name="isDefault" select="/result/page/@is-default" />
+	<xsl:variable name="pageLink" select="/result/page/@link" />
+	<xsl:variable name="domain" select="/result/@domain" />
 	<!--<xsl:variable name="siteInfoPage" select="document('upage://1')/udata/page" />-->
 	<!--<xsl:variable name="siteInfo" select="$siteInfoPage//group[@name = 'site_info']/property" />-->
 	<xsl:variable name="siteInfoPageId" select="'2'" />
+	<xsl:variable name="isAjax" select="document('udata://content/isAjaxRequest')/udata" />
 	<xsl:variable name="siteInfoPage" select="document(concat('upage://',$siteInfoPageId))/udata/page" />
 
 

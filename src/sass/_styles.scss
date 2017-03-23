@@ -151,22 +151,52 @@ input[type="text"] {
     }
 }
 
-select {
+textarea {
     border: none;
-    padding: 0 1em;
-    margin: 0;
+    padding: 1em 1em;
+    // margin: inherit;
     font-size: 0.9em;
     outline: none;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    width: 320px;
+    height: 70px;
+    color: #7e7e7e;
+    &::-webkit-input-placeholder {
+        font-size: 0.9em;
+        color: #7e7e7e;
+    }
+    &::-moz-placeholder {
+        font-size: 0.9em;
+        // color: #7e7e7e;
+    }
+    &:-moz-placeholder {
+        font-size: 0.9em;
+        color: #7e7e7e;
+    }
+    &:-ms-input-placeholder {
+        font-size: 0.9em;
+        color: #7e7e7e;
+    }
+}
+
+select {
+border: none;
+    padding: 0 1em;
+    // margin: inherit;
     font-size: 0.9em;
-    color: #525252;
-    border-radius: 10px;
-    background-color: #e7eded;
-    width: 221px;
+    outline: none;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
+    width: 320px;
     height: 37px;
-    appearance: none;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 94% 45%;
+    color: #7e7e7e;
     option {}
 }
 
@@ -497,7 +527,7 @@ header {
     }
     &_sliderwr {
         background-color: $lightGrey;
-        width: $mainMinWidt;
+        max-width: $mainMinWidt;
         min-height: 739px;
         max-height: 739px;
         height: 739px;
@@ -1194,7 +1224,7 @@ header {
     padding: 109px 0 1em 0;
     .about_button {
         width: 10em;
-        margin-top: -3em;
+        margin: 1em auto 5em auto;
     }
 }
 
@@ -1826,26 +1856,24 @@ footer {
     background-color: rgba(229, 189, 66, .94);
     width: 635px;
     height: 238px;
-    margin-top: -119px;
-    z-index: 99;
+    // margin-top: -119px;
+    // z-index: 99;
     padding: 53px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    color: #fff;
     &:before {
         z-index: 99;
-        left: -14px;
         top: 50%;
         margin-top: -11px;
         position: absolute;
         content: '';
-        width: 0;
         height: 0;
         border-style: solid;
         border-width: 11.5px 14px 11.5px 0;
         border-color: transparent $yellow transparent transparent;
         line-height: 0px;
-        // _border-color: #000000 #007bff #000000 #000000;
-        // _filter: progid: DXImageTransform.Microsoft.Chroma(color='#000000');
+        left: -38px;
+        width: 24px;
     }
     &_h {
         font-family: $openSansL;

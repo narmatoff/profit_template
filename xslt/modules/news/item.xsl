@@ -23,16 +23,19 @@
 	          </div>
 
 	       	<xsl:apply-templates select=".//property[@name='tags']" mode="news-lents-tags"/>
-			
-			<xsl:call-template name="makeThumbnail">
-        		<xsl:with-param name="alt" select="name"/>
-        		<xsl:with-param name="pwd" select=".//property[@name='publish_pic']/value/@path"/>
-        		<xsl:with-param name="element_id" select="@id"/>
-        		<xsl:with-param name="width" select="'728'"/>
-        		<xsl:with-param name="height" select="'auto'"/>
-        	</xsl:call-template>
+			<xsl:if test=".//property[@name='publish_pic']/value/@path">
+				<xsl:call-template name="makeThumbnail">
+	        		<xsl:with-param name="alt" select="name"/>
+	        		<xsl:with-param name="pwd" select=".//property[@name='publish_pic']/value/@path"/>
+	        		<xsl:with-param name="element_id" select="@id"/>
+	        		<xsl:with-param name="width" select="'728'"/>
+	        		<xsl:with-param name="height" select="'auto'"/>
+	        	</xsl:call-template>
+			</xsl:if>
 
 	          <xsl:value-of select=".//property[@name='content']/value" disable-output-escaping="yes" />
+
+	          <strong>поделиться</strong>
 	        </article>
 	      </section>
     </div>

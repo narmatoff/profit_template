@@ -9,8 +9,9 @@
 				exclude-result-prefixes="xsl date udt xlink">
 
 	<xsl:include href="add.xsl" />
+	<xsl:include href="posted.xsl" />
 <!-- 	<xsl:include href="page.xsl" />
 	<xsl:include href="post.xsl" />
-	<xsl:include href="posted.xsl" /> -->
+	 -->
 
 </xsl:stylesheet>

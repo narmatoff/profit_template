@@ -17,9 +17,8 @@
 	</xsl:template>
 
 	<xsl:template match="udata[@module = 'webforms'][@method = 'posted']">
-        <div class="wrap clearfix">
-		    <h1 style="padding: 100px 0;text-align: center;line-height: 35px"><xsl:value-of select="." disable-output-escaping="yes" /></h1>
-		    <div class="button leave-bid-button-zad" style="margin:-60px 0px 0px 42%;width: 140px;" onclick="history.back();">Назад</div>
+        <div class="questions_text">
+		    <xsl:value-of select="." disable-output-escaping="yes" />
         </div>
 
 	</xsl:template>

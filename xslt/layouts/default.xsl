@@ -9,6 +9,13 @@
     <xsl:param name="template-resources"/>
 
     <xsl:template match="/">
+		<xsl:choose>
+			<xsl:when test="$isAjax = 'yes'">
+				<xsl:apply-templates select="result"/>	
+			</xsl:when>
+			<xsl:otherwise>
+				
+			
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html/&gt;</xsl:text>
         <html lang="ru">
 
@@ -166,7 +173,7 @@
 			    <script src="//cdnjs.cloudflare.com/ajax/libs/packery/2.1.1/packery.pkgd.min.js"></script>
 			    <script src="{$template-resources}dist/js/all.min.js"></script>
 
-			    <div class="callback_block">
+			    <div class="callback_block callback_block_positioned">
 			      <div class="callback_block_trigger"></div>
 			      <xsl:apply-templates select="document('udata://webforms/add/121')/udata" mode="recall-webforms"/>
 			    </div>
@@ -178,6 +185,8 @@
 
             </body>
         </html>
+        </xsl:otherwise>
+		</xsl:choose>
     </xsl:template>
 
     <xsl:include href="__common.xsl"/>

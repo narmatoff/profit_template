@@ -23,7 +23,7 @@
 
 	<xsl:template match="toprev_link">
         <li>
-            <a href="{.}"><img src="{$template-resources}images/left-arrow.png" alt="begin-table" class="begin-table"/></a>
+            <a href="{.}">&lt;</a>
         </li>
 	</xsl:template>
 
@@ -59,64 +59,110 @@
 
 	<xsl:template match="tonext_link">
         <li>
-            <a href="{.}"><img src="{$template-resources}images/right-arrow.png" alt="end-table" class="end-table"/></a>
+            <a href="{.}">&gt;</a>
         </li>
 	</xsl:template>
 
 
 	<xsl:template name="numpages">
+        <xsl:param name="requesurl" />
+        <xsl:param name="template" />
+
         <xsl:param name="limit" />
         <xsl:param name="total" />
+
+		<xsl:if test="$total > ($p + 1) * $limit">
+			<input type="button" value="&show_more;" class="button button__yellow button__centered questions_button show_more">
+				<xsl:attribute name="data-requesurl">
+					<xsl:value-of select="$requesurl"/>
+				</xsl:attribute>
+				<xsl:attribute name="data-page">
+					<xsl:value-of select="$p"/>
+				</xsl:attribute>
+				<xsl:attribute name="data-total">
+					<xsl:value-of select="$total"/>
+				</xsl:attribute>
+				<xsl:attribute name="data-perpage">
+					<xsl:value-of select="$limit"/>
+				</xsl:attribute>
+				<xsl:attribute name="data-template">
+					<xsl:value-of select="$template"/>
+				</xsl:attribute>
+			</input>
+
+		</xsl:if>
+
         <xsl:if test="$total > $limit">
-            <xsl:apply-templates select="document(concat('udata://system/numpages/', $total, '/', $limit))/udata" mode="news-pager" /></xsl:if>
+            <xsl:apply-templates select="document(concat('udata://system/numpages/', $total, '/', $limit))/udata" mode="paging.numbers" /></xsl:if>
     </xsl:template>
-    <xsl:template match="udata[@module = 'system' and @method = 'numpages']" mode="news-pager">
-       <div class="catalog_pages" style="margin-top:30px;margin-bottom:-50px;padding-bottom:20px;float:right;">
-            Страница
-            <xsl:value-of select="items/item[@is-active='1']" />
-            из
-            <xsl:choose>
-                <xsl:when test="toend_link">
-                    <xsl:value-of select="toend_link/@page-num + 1" />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="items/item[@is-active='1']" />
-                </xsl:otherwise>
-            </xsl:choose>
-            <a href="#" style="margin-left:25px;">Показать все</a>
-            <xsl:apply-templates select="toprev_link" mode="num-good" />
-            <xsl:apply-templates select="tonext_link" mode="num-good" />
-        </div>
-       <!--  <div class="breadcrumbs2_wrapper">
-            <ul class="breadcrumbs2">
-                <xsl:apply-templates select="toprev_link" mode="num-news" />
-                <xsl:apply-templates select="items/item" mode="num-news" />
-                <xsl:apply-templates select="tonext_link" mode="num-news" />
-            </ul>
-        </div> -->
-    </xsl:template>
-    <xsl:template match="item[@is-active='1']" mode="num-news">
-        <li><span><xsl:value-of select="." disable-output-escaping="no" /></span>
-        </li>
-    </xsl:template>
-    <xsl:template match="item" mode="num-news">
-        <li>
-            <a href="{@link}">
-                <xsl:value-of select="." disable-output-escaping="no" />
-            </a>
-        </li>
-    </xsl:template>
-    <xsl:template match="tonext_link" mode="num-good">
-        <img style="margin-left:25px;" align="absmiddle" src="{$template-resources}/images/arrow_right.png" alt="Next" onmouseover="this.src='{$template-resources}/images/arrow_right_over.png'" onmouseout="this.src='{$template-resources}/images/arrow_right.png'" onclick="document.location='{.}'"/>
-    </xsl:template>
-    <xsl:template match="toprev_link" mode="num-good">
-        <img style="margin-left:25px;" align="absmiddle" src="{$template-resources}/images/arrow_left.png" alt="Previous" hspace="10" onmouseover="this.src='{$template-resources}/images/arrow_left_over.png'" onmouseout="this.src='{$template-resources}/images/arrow_left.png'" onclick="document.location='{.}'"/>
-    </xsl:template>
-    <xsl:template match="tonext_link" mode="num-news">
-        <a href="{.}">Следующая&nbsp;<img src="{$template-resources}/images/arrow1.gif" alt="" width="5" height="5" align="absmiddle" style="margin-bottom:1px"/></a>
-    </xsl:template>
-    <xsl:template match="toprev_link" mode="num-news">
-        <a href="{.}"><img src="{$template-resources}/images/arrow2.gif" alt="" width="5" height="5" align="absmiddle" style="margin-bottom:1px"/>&nbsp;Предыдущая</a>&nbsp;&nbsp;
-    </xsl:template>
+
+
+	<xsl:template match="udata[not(tobegin_link) and toend_link]" mode="paging.words">
+	    <div class="paging-words">
+	      <a>«&nbsp;В начало</a>
+	      &nbsp;    
+	      <a>«&nbsp;Предыдущая</a>    
+	      &nbsp;&nbsp;|&nbsp;&nbsp;
+	      <a class="active" href="{tonext_link}">Следующая&nbsp;»</a>
+	      &nbsp;
+	      <a class="active" href="{toend_link}">В&nbsp;конец&nbsp;»</a>
+	    </div>
+	</xsl:template>
+
+	<xsl:template match="udata[tobegin_link and toend_link]" mode="paging.words">
+	    <div class="paging-words">
+	      <a class="active" href="{tobegin_link}">«&nbsp;В начало</a>
+	      &nbsp;
+	      <a class="active" href="{toprev_link}">«&nbsp;Предыдущая</a>
+	      &nbsp;&nbsp;|&nbsp;&nbsp;
+	      <a class="active" href="{tonext_link}">Следующая&nbsp;»</a>
+	      &nbsp;
+	      <a class="active" href="{toend_link}">В&nbsp;конец&nbsp;»</a>
+	    </div>
+	</xsl:template>
+	 
+	<xsl:template match="udata[tobegin_link and not(toend_link)]" mode="paging.words">
+	    <div class="paging-words">
+	      <a class="active" href="{tobegin_link}">«&nbsp;В начало</a>
+	      &nbsp;
+	      <a class="active" href="{toprev_link}">«&nbsp;Предыдущая</a>
+	      &nbsp;&nbsp;|&nbsp;&nbsp;
+	      <a>Следующая&nbsp;»</a>
+	      &nbsp;
+	      <a>В&nbsp;конец&nbsp;»</a>
+	    </div>
+	</xsl:template>
+
+
+
+	<xsl:template match="udata[items]" mode="paging.numbers">  
+	    <div class="paging-numbers" hidden="true">
+	    
+	      <table align="center">
+	        <tbody>
+	          <tr><td>
+	            
+	            <span>Страницы:</span>
+	            <xsl:apply-templates select="items" mode="paging.numbers" />
+	            
+	          </td></tr>
+	        </tbody>
+	      </table>
+	    
+	    </div>
+	</xsl:template>
+	  
+	<xsl:template match="item" mode="paging.numbers">
+	    <a class="active" href="{@link}">
+	       <xsl:value-of select="." />   
+	    </a>
+	</xsl:template>
+	  
+	<xsl:template match="item[@is-active = '1']" mode="paging.numbers">
+	    <a>
+	       <xsl:value-of select="." />   
+	    </a>
+	</xsl:template>
+
 
 </xsl:stylesheet>

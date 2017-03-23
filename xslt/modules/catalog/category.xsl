@@ -34,7 +34,7 @@
     	<a href="{@link}">
     		<xsl:attribute name="class">
     			<xsl:if test="@link = $pageLink">
-					<xsl:text>какой то класс</xsl:text>
+					<xsl:text>selected</xsl:text>
     			</xsl:if>
     		</xsl:attribute>
     		<xsl:value-of select="."/>
@@ -88,7 +88,7 @@
     </xsl:template>
 
     <xsl:template match="property" mode="uslugi-sertifikaty">
-    	<div class="full_width full_width__white our_partners">
+    	<div class="full_width full_width__lightgrey our_partners">
 	      <div class="big_heading big_heading_black">Примеры документов</div>
 	      <div class="cert_list magnific_gallery">
 			<xsl:apply-templates select="value" mode="about-sertifikaty"/>

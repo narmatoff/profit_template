@@ -3,7 +3,13 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:umi="http://www.umi-cms.ru/TR/umi">
 
-   
+   <xsl:template match="udata[@method = 'lastlist']/archive"/>
+   <xsl:template match="udata[@method = 'lastlist']/archive_link"/>
+   <xsl:template match="udata[@method = 'lastlist']/total"/>
+   <xsl:template match="udata[@method = 'lastlist']/per_page"/>
+   <xsl:template match="udata[@method = 'lastlist']/category_id"/>
+   <xsl:template match="udata[@method = 'lastlist']/extended"/>
+
 	<xsl:template match="udata[@method = 'lastlist']/items/item">
 
 		<article>	
@@ -33,8 +39,16 @@
       </div>
 	</xsl:template>
 
-	<xsl:template match="value" mode="news-lents-tag">
-		<a href="#"><xsl:value-of select="."/></a>
+	<xsl:template match="value|item" mode="news-lents-tag">
+		<a href="#tag" data-tag="{.}">
+			<xsl:attribute name="class">
+				<xsl:text>tag_link</xsl:text>
+				<xsl:if test="@is_selected">
+					<xsl:text> selected</xsl:text>
+				</xsl:if>
+			</xsl:attribute>
+			<xsl:value-of select="."/>
+		</a>
 	</xsl:template>
 
 	<xsl:template match="d" mode="news-date">

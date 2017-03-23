@@ -16,5 +16,19 @@
     		</a>
 	</xsl:template>
 
+	<xsl:template match="udata[@module = 'catalog'][@method = 'getCategoryList']" mode="cat-with-description">
+		
+		<xsl:apply-templates select=".//items/item" mode="cat-with-description_item"/>
+
+	</xsl:template>
+	
+	<xsl:template match="item" mode="cat-with-description_item">
+        <a href="{@link}" class="category_item category_item__descr">
+			<img umi:element-id="{@id}" umi:field-name="ikonka" src="{.//property[@name='ikonka']/value}" alt="{@name}"/>
+		    <span umi:element-id="{@id}" umi:field-name="name"><xsl:value-of select="@name"/></span>
+    		<xsl:value-of select=".//property[@name='kratkoe_opisanie']/value" disable-output-escaping="yes" />
+    	</a>
+	</xsl:template>
+
 
 </xsl:stylesheet>

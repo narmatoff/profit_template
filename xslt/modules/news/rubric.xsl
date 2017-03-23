@@ -10,19 +10,23 @@
 		<div class="main_width content_wr">
 	      
      		<div class="tags_block_content">
-     			<a href="#">Статьи по теме налговой отчётности</a>
-     			<a href="#">Восстановление налогового и бухучёта</a>
-     			<a href="#">Бухотчётность, основные формы</a>
-     			<a href="#">Анализ и ацдит бухотчётности</a>
-     			<a href="#">Налоговая отчётность по упрощёнке</a>
-     			<a href="#">Поставнока налогового и бухучёта</a>
+     			<xsl:apply-templates select="document(concat('udata://content/getTags/', $pageId))/udata/items/item" mode="news-lents-tag"/>
      		</div>
 
-        	<xsl:variable name="news" select="document(concat('udata://news/lastlist/', $pageId, '/?extProps=anons,tags,name'))/udata"/>
+        	<xsl:variable name="news" select="document(concat('udata://news/lastlist/', $pageId, '///?extProps=anons,tags,name'))/udata"/>
 
             <section>
                 <xsl:apply-templates select="$news/items/item" />
+	            <!-- кнопка прокрутки + пагинация -->
+		        <xsl:call-template name="numpages">
+			        <xsl:with-param name="requesurl" select="concat('/udata://news/lastlist/', $pageId, '///?extProps=anons,tags,name')" />
+			        <xsl:with-param name="template" select="'modules/news/lastlist.xsl'" />
+
+			        <xsl:with-param name="total" select="$news/total" />
+	        		<xsl:with-param name="limit" select="$news/per_page" />
+	    		</xsl:call-template>
             </section>
+
         </div>
 
 	</xsl:template>
