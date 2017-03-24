@@ -199,15 +199,17 @@ HTML;
         $tags = array_unique($tags);
 
         $fields_filter = getRequest('fields_filter');
-        // if (condition) {
-        // 	# code...
-        // }
+        $filterArr = array();
+        if (isset($fields_filter['tags']['eq'])) {
+        	$filterArr = $fields_filter['tags']['eq'];
+        }
 
         foreach ($tags as $tag) {
+        	$item = array();
 			$item['attribute:value'] = $tag;
             
-            if (getRequest('fields_filter')) {
-            	# code...
+            if (in_array($tag, $filterArr)) {
+				$item['attribute:is_selected'] = 'selected';
             }
 
             $item['node:text'] = $tag;
