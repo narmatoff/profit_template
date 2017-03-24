@@ -1879,6 +1879,8 @@ footer {
             margin: -6.5px 0 0 0;
             transform: rotate(180deg);
             transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+            transform: translateZ(0);
+
             // animation: easeOutBounceBack .8s 0s forwards;
         }
         &__expanded {
@@ -1902,6 +1904,8 @@ footer {
     }
     &_content {
         height: 0;
+            transform: translateZ(0);
+        
         overflow: hidden;
         // transition: max-height 800ms cubic-bezier(0.19, 1, 0.22, 1);
         // transition: all 0.800s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1915,10 +1919,13 @@ footer {
         }
         table {
             width: 100%;
+            background-color: #DEE3E7;
+            transform: translateZ(0);
             tr {
-                background-color: #DEE3E7;
                 td,
                 th {
+                    transition: background-color .2s ease;
+            // transform: translateZ(0);
                     color: #fff;
                     font-family: $openSans;
                     min-height: 57px;
