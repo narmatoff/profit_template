@@ -38,7 +38,7 @@
     "jshint": "^2.9.2",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
-    "node-sass": "^3.6.0",
+    "node-sass": "^4.14.1",
     "sass": "^0.5.0",
     "wiredep": "^4.0.0"
   }
